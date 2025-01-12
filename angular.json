@@ -24,12 +24,24 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/lib"  
             ],
             "styles": [
-              "src/styles.css"
+              "src/css/style.css",
+              "src/styles.css",
+              "src/css/bootstrap.min.css",
+              "src/lib/owlcarousel/assets/owl.carousel.min.css",
+              "src/lib/animate/animate.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "/node_modules/jquery/dist/jquery.min.js",
+              "src/lib/wow/wow.min.js",
+              "src/lib/easing/easing.min.js",
+              "src/lib/waypoints/waypoints.min.js",
+              "src/lib/owlcarousel/owl.carousel.min.js",
+              "src/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -85,12 +97,16 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/lib/animate/animate.min.css"  
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d210ea7f-d80e-4fe5-8521-b870291a49fd"
   }
 }
