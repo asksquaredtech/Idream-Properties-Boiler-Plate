@@ -25,7 +25,9 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              "src/lib"  
+              "src/lib",
+              "src/css",
+              "src/img"
             ],
             "styles": [
               "src/css/style.css",
