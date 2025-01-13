@@ -32,6 +32,8 @@
             ],
             "styles": [
               "src/css/style.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
               "src/styles.css",
               "src/css/bootstrap.min.css",
               "src/lib/owlcarousel/assets/owl.carousel.min.css",
@@ -39,6 +41,7 @@
             ],
             "scripts": [
               "/node_modules/jquery/dist/jquery.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
               "src/lib/wow/wow.min.js",
               "src/lib/easing/easing.min.js",
               "src/lib/waypoints/waypoints.min.js",
