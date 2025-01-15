@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 /********** Template CSS **********/
 :root {
-    --primary: #f9781c;
-    --secondary: #c4531f;
+    --primary: #f47921;
+    --secondary: #4b4c4d;
+    --tertiary: #ffffff;
     --light: #EFFDF5;
     --dark: #434343;
 }
