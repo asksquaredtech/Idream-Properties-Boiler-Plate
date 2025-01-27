@@ -26,7 +26,7 @@ export class HomepageComponent implements AfterViewInit{
         loop: true,
         margin: 10,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 2500,
         autoplayHoverPause: true,
         nav : true,
           navText : [
