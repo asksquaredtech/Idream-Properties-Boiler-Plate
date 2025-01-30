@@ -3,13 +3,12 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { CrudService } from '../services/crud.service'; // Adjust the path as necessary
 
 @Component({
-  selector: 'app-contact-form',
-  standalone: true, // Mark this component as standalone
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css'],
-  imports: [ReactiveFormsModule] // Import ReactiveFormsModule here
+  selector: 'app-contactpage',
+  imports: [ReactiveFormsModule],
+  templateUrl: './contactpage.component.html',
+  styleUrl: './contactpage.component.css'
 })
-export class ContactFormComponent implements OnInit {
+export class ContactpageComponent {
   contactForm: FormGroup;
 
   constructor(private fb: FormBuilder, private crudService: CrudService) {
