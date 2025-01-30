@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
-import { SecondpageComponent } from './secondpage/secondpage.component';import { ContactFormComponent } from './contact-form/contact-form.component';
+import { SecondpageComponent } from './secondpage/secondpage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 
 export const routes: Routes = [
