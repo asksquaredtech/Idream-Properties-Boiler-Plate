@@ -3,7 +3,7 @@
     --primary: #f47921;
     --secondary: #4b4c4d;
     --tertiary: #ffffff;
-    --light: #EFFDF5;
+    --light: #eee;
     --dark: #0E2E50;
 }
 
@@ -171,16 +171,16 @@
 
 .header-carousel .owl-nav {
     position: absolute;
-    top: 50%;
-    left: -25px;
+    top: 95%;
+    left: 50%;
     transform: translateY(-50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .header-carousel .owl-nav .owl-prev,
 .header-carousel .owl-nav .owl-next {
-    margin: 7px 0;
+    margin: 7px 5px 5px 5px;
     width: 50px;
     height: 50px;
     display: flex;
