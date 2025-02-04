@@ -19,7 +19,7 @@ body {
     max-width: 800px;
     margin: 0 15%;
     max-width: 930px;
-    margin: 35px 18% 35px 18%;
+    margin: 35px 18% 35px 20%;
 }
 
 .grid-item {
@@ -109,4 +109,121 @@ body {
     .hover-content h3 {
         font-size: 1rem;
     }
+}
+
+/* 3 section component */
+.containerx {
+  display: flex;
+  height: 60vh;
+  gap: 10px;
+  margin: 0 10% 0 10%
+}
+
+.section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.section.properties { background-color: #4CAF50; }
+.section.cinema { background-color: #2196F3; }
+.section.cricket { background-color: #FF5722; }
+
+.section h2 {
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.section .content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: bottom 0.5s ease;
+}
+
+.section .view-more {
+  display: block;
+  text-align: center;
+  color: #ffcc00;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.section .know-more {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Desktop Hover Effects */
+@media (min-width: 769px) {
+  .section:hover {
+    flex: 3;
+  }
+  
+  .section:hover .content {
+    bottom: 0;
+    height: 90%;
+  }
+  
+  .section:hover .know-more {
+    opacity: 1;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .containerx {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .section {
+    width: 100%;
+    height: 80px;
+    flex: none !important;
+    transition: height 0.5s ease;
+  }
+
+  .section.active {
+    height: 300px;
+  }
+
+  .section .content {
+    position: relative;
+    bottom: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.5s ease;
+  }
+
+  .section.active .content {
+    max-height: 1000px;
+    padding: 20px;
+  }
+
+  .section .know-more {
+    display: none;
+  }
 }

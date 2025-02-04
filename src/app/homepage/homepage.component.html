@@ -144,6 +144,51 @@
     </div>
     <!-- About End -->
 
+    <div class="container-xxl py-5" >
+        <div class="containerx">
+              <!-- Properties Section -->
+            <div class="section properties">
+                <h2>Properties</h2>
+                <div class="content">
+                <ul>
+                    <li>Point 1 about Properties</li>
+                    <li>Point 2 about Properties</li>
+                    <li>Point 3 about Properties</li>
+                </ul>
+                <a href="#" class="view-more">View More</a>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+
+            <!-- Cinema Section -->
+            <div class="section cinema">
+                <h2>Cinema</h2>
+                <div class="content">
+                <ul>
+                    <li>Point 1 about Cinema</li>
+                    <li>Point 2 about Cinema</li>
+                    <li>Point 3 about Cinema</li>
+                </ul>
+                <a href="#" class="view-more">View More</a>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+
+            <!-- Cricket Section -->
+            <div class="section cricket">
+                <h2>Cricket</h2>
+                <div class="content">
+                <ul>
+                    <li>Point 1 about Cricket</li>
+                    <li>Point 2 about Cricket</li>
+                    <li>Point 3 about Cricket</li>
+                </ul>
+                <a href="#" class="view-more">View More</a>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+        </div>
+    </div>
     <!-- Property List Start -->
     <!-- <div class="container-xxl py-5">
             <div class="container">
@@ -703,3 +748,59 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
+
+<script>
+    const sections = document.querySelectorAll('.section');
+    let isMobile = window.matchMedia("(max-width: 768px)").matches;
+    
+    // Handle mobile click events
+    function handleSectionClick() {
+      if (!isMobile) return;
+    
+      sections.forEach(s => {
+        if (s !== this) {
+          s.classList.remove('active');
+          s.style.flex = '1';
+        }
+      });
+    
+      this.classList.toggle('active');
+    }
+    
+    // Handle desktop hover events
+    function handleHover() {
+      if (isMobile) return;
+      
+      sections.forEach(s => {
+        if (s !== this) {
+          s.style.flex = '0.5';
+        }
+      });
+    }
+    
+    function resetSections() {
+      if (isMobile) return;
+      
+      sections.forEach(s => {
+        s.style.flex = '1';
+      });
+    }
+    
+    // Event Listeners
+    sections.forEach(section => {
+      section.addEventListener('click', handleSectionClick);
+      section.addEventListener('mouseenter', handleHover);
+      section.addEventListener('mouseleave', resetSections);
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      isMobile = window.matchMedia("(max-width: 768px)").matches;
+      if (!isMobile) {
+        sections.forEach(s => {
+          s.classList.remove('active');
+          s.style.flex = '1';
+        });
+      }
+    });
+    </script>
