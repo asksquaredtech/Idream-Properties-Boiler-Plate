@@ -17,9 +17,8 @@ body {
     gap: 20px;
     width: 70%;
     max-width: 800px;
-    margin: 0 15%;
     max-width: 930px;
-    margin: 35px 18% 35px 20%;
+    margin: 35px 20% 35px 20%;
 }
 
 .grid-item {
