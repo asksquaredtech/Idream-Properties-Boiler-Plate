@@ -6,6 +6,7 @@ import { IdreamcinemasComponent } from './idreamcinemas/idreamcinemas.component'
 import { IdreamcricketComponent } from './idreamcricket/idreamcricket.component';
 import { IdreampropertiesComponent } from './idreamproperties/idreamproperties.component';
 import { JointventureComponent } from './jointventure/jointventure.component';
+import { IdreamvistaraComponent } from './idreamvistara/idreamvistara.component';
 
 export const routes: Routes = [
     // Avoid creating components with '-, ,' in the name. Create components without empty space
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {path:'TiruppurTamilans', component: IdreamcricketComponent},
     {path:'Properties', component: IdreampropertiesComponent},
     {path:'jointventures', component: JointventureComponent},
+    {path:'vistara',component:IdreamvistaraComponent},
 
     
     {path:'**', redirectTo: 'home'}
