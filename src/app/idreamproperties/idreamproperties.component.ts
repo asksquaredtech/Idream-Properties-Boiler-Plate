@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 declare var $: any;
 @Component({
   selector: 'app-idreamproperties',
@@ -6,7 +6,7 @@ declare var $: any;
   templateUrl: './idreamproperties.component.html',
   styleUrl: './idreamproperties.component.css'
 })
-export class IdreampropertiesComponent {
+export class IdreampropertiesComponent implements AfterViewInit {
   ngAfterViewInit() {
 
     // Spinner
