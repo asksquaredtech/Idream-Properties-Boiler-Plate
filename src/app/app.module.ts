@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app.component'; // Import your standalone component
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from '../environments/environments';
 
 @NgModule({
   imports: [
@@ -12,7 +15,11 @@ import { AppComponent } from './app.component'; // Import your standalone compon
   ],
   providers: [],
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Bootstrap the application
 bootstrapApplication(AppComponent)
