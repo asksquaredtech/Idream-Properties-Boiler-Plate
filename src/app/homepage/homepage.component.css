@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
     min-height: 100vh;
     display: flex;
@@ -347,4 +349,8 @@ body {
   .dream-blog-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.block{
+  height:100vh;
 }
