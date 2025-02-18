@@ -15,8 +15,8 @@ export const routes: Routes = [
     {path:'second', component: SecondpageComponent}, //test page do not delete
     {path:'contact', component: ContactpageComponent},
     {path:'cinemas', component: IdreamcinemasComponent},
-    {path:'TiruppurTamilans', component: IdreamcricketComponent},
-    {path:'Properties', component: IdreampropertiesComponent},
+    {path:'tiruppurTamilans', component: IdreamcricketComponent},
+    {path:'properties', component: IdreampropertiesComponent},
     {path:'jointventures', component: JointventureComponent},
     {path:'vistara',component:IdreamvistaraComponent},
 
