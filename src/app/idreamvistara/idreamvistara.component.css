@@ -40,3 +40,164 @@
             to { opacity: 1; }
         }
     
+
+        /* header element styles */
+        
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+.hero {
+  background: url('https://lh3.googleusercontent.com/d/1ebdtoHKUMGQcQqjF6cqZLu0nqjS7pTS6?authuser=0') no-repeat Top center/cover;
+  height: 80vh;
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 10% 0 10%; 
+    background-color:#effdf5;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 10% 0 10%; 
+    background-color: rgba(239, 253, 245, 0.7); /* 0.7 = 70% opacity */
+    border-radius: 8px; /* Optional: for rounded corners */
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect for a frosted glass look */
+}
+
+
+.hero-content p {
+    font-size: 1rem;
+    color: #f47921;
+    margin: 15px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary, .btn-submit {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #f47921;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1A252F;
+}
+
+.btn-secondary {
+    background-color: #0e2e50;
+    color: #f8f8f8;
+    border: 2px solid #272424;
+}
+
+.btn-secondary:hover {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.hero-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.hero-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-form input, .hero-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background-color: #E67E22;
+    color: white;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #D35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center align */
+        height: 100vh;
+        font-size: 10px;
+    }
+    .hero-content h1{
+        font-size: 16px
+    }
+    .hero-content p{
+        font-size: 13px
+    }
+
+    .hero-content{
+        margin: 100px 10% 0 10%; 
+    }
+    .hero-form{
+        margin-top:0vh;
+        font-size: 8px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}

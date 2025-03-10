@@ -65,14 +65,15 @@ export class IdreamvistaraComponent implements AfterViewInit {
     if (form) {
       form.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent default form submission (no page redirect)
+        debugger;
         this.submitForm(form);
       });
     }
   }
 
   submitForm(form: HTMLFormElement) {
-    const formData = new FormData(form);
-
+    debugger;
+    var formData = new FormData(form);
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData

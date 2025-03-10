@@ -72,8 +72,7 @@ export class HomepageComponent implements AfterViewInit {
   }
 
   submitForm(form: HTMLFormElement) {
-    const formData = new FormData(form);
-
+    var formData = new FormData(form);
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
