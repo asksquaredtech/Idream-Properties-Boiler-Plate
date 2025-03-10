@@ -167,6 +167,62 @@
     background-color: #D35400;
 }
 
+/* Container for the property info block */
+.property-info {
+    background-color: #f9f9f9; /* Subtle background */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto; /* Center the block horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Address styling */
+  .property-address {
+    color: #2C3E50;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .property-address strong {
+    color: #E67E22; /* Highlight 'Address' text */
+  }
+  
+  /* Description & summary styling */
+  .property-description,
+  .property-summary {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Features list styling */
+  .property-features {
+    list-style-type: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+  
+  .property-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  /* Icon color and spacing */
+  .property-features li i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #E67E22; /* Secondary color */
+  }
+  
+  /* Remove margin for the last list item */
+  .property-features li:last-child {
+    margin-bottom: 0;
+  }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
@@ -200,4 +256,16 @@
     .btn-primary, .btn-secondary {
         width: 100%;
     }
+    .property-info {
+        max-width: 90%;
+        margin: 1rem auto;
+        padding: 1rem;
+      }
+    
+      .property-address,
+      .property-description,
+      .property-summary,
+      .property-features li {
+        font-size: 0.95rem; /* Slightly smaller text for mobile */
+      }
 }
