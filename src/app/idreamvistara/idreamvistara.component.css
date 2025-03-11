@@ -247,6 +247,7 @@
     .hero-form{
         margin-top:0vh;
         font-size: 8px;
+        width:80%;
     }
     .hero-buttons {
         flex-direction: column;
@@ -254,7 +255,11 @@
     }
 
     .btn-primary, .btn-secondary {
-        width: 100%;
+        width: 60%;
+        font-size: 12px;
+        padding: 5px 20px !important;
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center align */
     }
     .property-info {
         max-width: 90%;
