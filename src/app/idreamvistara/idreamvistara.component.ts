@@ -58,8 +58,19 @@ export class IdreamvistaraComponent implements AfterViewInit {
     });
 
     this.setupFormSubmit();
+    this.setupFormSubmit1();
   }
+  setupFormSubmit1() {
+    const form = document.getElementById('contactForm1') as HTMLFormElement;
+    const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
+    if (submitButton) {
+      submitButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default form submission (no page redirect)
+        this.submitForm1(form);
+      });
+    }
+  }
   setupFormSubmit() {
     const form = document.getElementById('contactForm') as HTMLFormElement;
     if (form) {
@@ -90,9 +101,33 @@ export class IdreamvistaraComponent implements AfterViewInit {
       alert('Error occurred: ' + error.message);
     });
   }
-
+  submitForm1(form: HTMLFormElement) {
+    debugger;
+    var formData = new FormData(form);
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then((response) => {
+      if (response.ok) {
+        this.showSuccessMessage1();
+        form.reset();
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    })
+    .catch((error) => {
+      alert('Error occurred: ' + error.message);
+    });
+  }
   showSuccessMessage() {
     const successMessage = document.getElementById('successMessage');
+    if (successMessage) {
+      successMessage.style.display = 'block';
+    }
+  }
+  showSuccessMessage1() {
+    const successMessage = document.getElementById('successMessage1');
     if (successMessage) {
       successMessage.style.display = 'block';
     }
