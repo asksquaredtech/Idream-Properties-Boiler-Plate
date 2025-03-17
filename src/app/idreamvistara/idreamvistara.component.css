@@ -233,6 +233,7 @@
         align-items: center; /* Center align */
         height: 100vh;
         font-size: 10px;
+        background-position: center right 53.5%;
     }
     .hero-content h1{
         font-size: 16px
@@ -243,11 +244,18 @@
 
     .hero-content{
         margin: 100px 10% 0 10%; 
+        /* display: none; */
     }
     .hero-form{
         margin-top:0vh;
         font-size: 8px;
         width:80%;
+    }
+    .hero-form h3{
+        font-size: 16px;
+    }
+    .hero-form input{
+        max-height: 40px;
     }
     .hero-buttons {
         flex-direction: column;
@@ -274,3 +282,34 @@
         font-size: 0.95rem; /* Slightly smaller text for mobile */
       }
 }
+
+/* @media (max-width: 1300px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        height: 100vh;
+        font-size: 10px;
+    }
+    .hero-content h1{
+        font-size: 16px
+    }
+    .hero-content p{
+        font-size: 13px
+    }
+
+    .hero-content{
+        margin: 100px 10% 0 10%; 
+    }
+    .hero-form{
+        margin-top:0vh;
+        font-size: 8px;
+        width:80%;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+} */
