@@ -1,5 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 declare var $: any;
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-idreamvistara',
   imports: [],
@@ -81,7 +83,11 @@ export class IdreamvistaraComponent implements AfterViewInit {
       });
     }
   }
+  constructor(private router: Router) { }
 
+  public navigateToFormSuccess() {
+    this.router.navigate(['/formsubmitsuccess']);
+  }
   submitForm(form: HTMLFormElement) {
     debugger;
     var formData = new FormData(form);
@@ -93,6 +99,7 @@ export class IdreamvistaraComponent implements AfterViewInit {
       if (response.ok) {
         this.showSuccessMessage();
         form.reset();
+        this.navigateToFormSuccess();
       } else {
         alert('Something went wrong. Please try again.');
       }
@@ -112,6 +119,7 @@ export class IdreamvistaraComponent implements AfterViewInit {
       if (response.ok) {
         this.showSuccessMessage1();
         form.reset();
+        this.navigateToFormSuccess();
       } else {
         alert('Something went wrong. Please try again.');
       }
