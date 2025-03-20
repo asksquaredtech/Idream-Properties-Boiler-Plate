@@ -64,14 +64,21 @@ export class IdreamvistaraComponent implements AfterViewInit {
   }
   setupFormSubmit1() {
     const form = document.getElementById('contactForm1') as HTMLFormElement;
-    const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
-
-    if (submitButton) {
-      submitButton.addEventListener('click', (event) => {
+    if (form) {
+      form.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent default form submission (no page redirect)
+        debugger;
         this.submitForm1(form);
       });
     }
+    // const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+    // if (submitButton) {
+    //   submitButton.addEventListener('click', (event) => {
+    //     event.preventDefault(); // Prevent default form submission (no page redirect)
+    //     this.submitForm1(form);
+    //   });
+    // }
   }
   setupFormSubmit() {
     const form = document.getElementById('contactForm') as HTMLFormElement;
