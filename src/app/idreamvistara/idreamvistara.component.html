@@ -1,138 +1,109 @@
-<div class="container-xxl bg-white p-0">
-    <!-- <div class="container-fluid header bg-white p-0">
-        <div class="row g-0 align-items-center flex-column-reverse flex-md-row"> -->
-            <!-- <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Find A <span class="text-primary">Perfect Home</span> To Live With Your Family</h1>
-                    <p class="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
-                        sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                    <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
-                </div> -->
-            <!-- <div class="col-sm-12 animated fadeIn">
-                <div class="owl-carousel header-carousel">
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid"
-                            src="https://lh3.googleusercontent.com/d/16ALWyRDNkpnrM8FLs1OzG_qI8KTLMbng?authuser=0"
-                            alt="">
-                    </div>
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid"
-                            src="https://lh3.googleusercontent.com/d/1ebdtoHKUMGQcQqjF6cqZLu0nqjS7pTS6?authuser=0"
-                            alt="">
-                    </div>
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid"
-                            src="https://lh3.googleusercontent.com/d/1fg7omGN0IqTPT_XsrN8jPbHvQq3WLfMp?authuser=0"
-                            alt="">
-                    </div>
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid"
-                            src="https://lh3.googleusercontent.com/d/1leLjYYqTm-VS02aXWUf_K2NNUhjwCrn2?authuser=0"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+<div class="container-xxl bg-white p-0">    
     <div class="container-xxl bg-white p-0">
         <section class="hero">
-            <div class="hero-image">
-                <img src="" alt="Luxury Property">
+          <div class="hero-image">
+            <img src="" alt="Luxury Property">
+          </div>
+          <div class="hero-content">
+            <h1>Experience Luxury Living at Vistara</h1>
+            <p>Discover your perfect plot in the heart of the city, offering prime location, stunning surroundings, and world-class infrastructure.</p>
+            <div class="hero-buttons">
+              <a href="vistara#contact"><button class="btn-primary">Schedule a Visit</button></a>
+              <a href="https://drive.google.com/file/d/1O7gcOXfsjMrZxxEe65UG3Z7AJod6gkNJ/view?usp=drive_link"
+                target="_blank"><button class="btn-secondary">Download Brochure</button></a>
+              <!-- Added new button to trigger form popup -->
+              <button class="btn-primary" (click)="openFormModal()">Contact Us</button>
             </div>
-            <div class="hero-content">
-                <h1>Experience Luxury Living at Vistara</h1>
-                <p>Discover your perfect plot in the heart of the city, offering prime location, stunning surroundings, and world-class infrastructure.</p>
-                <div class="hero-buttons">
-                    <a href="vistara#contact"><button class="btn-primary">Schedule a Visit</button></a>
-                    <a href="https://drive.google.com/file/d/1O7gcOXfsjMrZxxEe65UG3Z7AJod6gkNJ/view?usp=drive_link"
-                    target="_blank"><button class="btn-secondary">Download Brochure</button></a>
-                </div>
-            </div>
-            <div class="hero-form">
-                <h3>Get More Information – Fill Out the Form</h3>
-                <form id="contactForm1">
-                    <input type="hidden" name="access_key" value="6d969267-d181-465b-9021-154112a19b34">
-                    <div class="mb-3">
-                        <input type="text" id="name" name="name" class="form-control py-3 px-4"
-                            placeholder="Your Name" maxlength="20" pattern="[a-zA-Z\s]+" title="Only Alphabets are allowed" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control py-3 px-4"
-                            placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="tel" id="phone" name="phone" class="form-control py-3 px-4"
-                            placeholder="Your Phone Number" maxlength="10" required pattern="(0|91)?[6-9][0-9]{9}"
-                            title="Please Enter a valid phone number">
-                    </div>
-                    <!-- <div class="mb-3">
-                        <textarea id="message" name="message" class="form-control py-3 px-4"
-                            placeholder="Your Message" maxlength="50" required></textarea>
-                    </div> -->
-
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                    <button type="submit" id="submitBtn" class="btn btn-primary py-3 px-4 mt-3" onclick="submitForm1(FormData)">Submit Form</button>
-                </form>
-                <!-- Success Message Pop-Up -->
-                <div id="successMessage1" class="alert alert-success mt-3" style="display: none;">
-                    We will get back to you shortly.
-                </div>
-            </div>
+          </div>
         </section>
+      
+        <!-- Form Popup Modal -->
+        <div class="form-popup-overlay" [class.active]="showFormModal">
+          <div class="form-popup-container">
+            <div class="form-popup">
+              <button class="close-popup" (click)="closeFormModal()">&times;</button>
+              <h3>Get More Information – Fill Out the Form</h3>
+              <form id="contactForm1">
+                <input type="hidden" name="access_key" value="6d969267-d181-465b-9021-154112a19b34">
+                <div class="mb-3">
+                  <input type="text" id="name" name="name" class="form-control py-3 px-4"
+                        placeholder="Your Name" maxlength="20" pattern="[a-zA-Z\s]+" 
+                        title="Only Alphabets are allowed" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" id="email" name="email" class="form-control py-3 px-4"
+                        placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <input type="tel" id="phone" name="phone" class="form-control py-3 px-4"
+                        placeholder="Your Phone Number" maxlength="10" required 
+                        pattern="(0|91)?[6-9][0-9]{9}" title="Please Enter a valid phone number">
+                </div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit" class="btn btn-primary py-3 px-4 mt-3">Submit Form</button>
+              </form>
+              <div id="successMessage1" class="alert alert-success mt-3" style="display: none;">
+                We will get back to you shortly.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
 
     <!-- Property Overview Section -->
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <!-- Left Section: Text and Features -->
-            <div class="col-lg-6 mb-4">
-                <h2 class="fw-bold mb-4">🏡 Explore Your Future Plot</h2>
-                <p>
-                    Unlock the potential of premium residential plots in a well-connected, thriving location. Ideal for
-                    building your dream home or a secure investment for the future.
-                </p>
-
-                <!-- Unique Plot Features -->
-                <div class="d-flex align-items-start mb-4">
-                    <i class="fas fa-tree text-success fs-3 me-3"></i>
-                    <div>
-                        <h5>Eco-Friendly Living</h5>
-                        <p>Enjoy lush green landscapes with dedicated parks and open spaces for a refreshing lifestyle.
+    <div class="container-fluid px-lg-5 my-5">  <!-- Changed to container-fluid and added px-lg-5 -->
+        <div class="row justify-content-center">  <!-- Added justify-content-center -->
+            <div class="col-xxl-10 col-12">  <!-- Added constrained width column -->
+                <div class="row align-items-center gx-5">  <!-- Added gx-5 for horizontal gutter -->
+                    <!-- Left Section: Text and Features -->
+                    <div class="col-lg-6 mb-4 pe-lg-5">  <!-- Added pe-lg-5 for right padding -->
+                        <h2 class="fw-bold mb-4">🏡 Explore Your Future Plot</h2>
+                        <p class="mb-4">
+                            Unlock the potential of premium residential plots in a well-connected, thriving location. Ideal for
+                            building your dream home or a secure investment for the future.
                         </p>
+    
+                        <!-- Unique Plot Features -->
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-tree text-success fs-3 me-3"></i>
+                            <div>
+                                <h5>Eco-Friendly Living</h5>
+                                <p class="mb-0">Enjoy lush green landscapes with dedicated parks and open spaces for a refreshing lifestyle.</p>
+                            </div>
+                        </div>
+    
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-route text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5>Easy Connectivity</h5>
+                                <p class="mb-0">Strategically located with quick access to highways, schools, and essential amenities.</p>
+                            </div>
+                        </div>
+    
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-shield-alt text-danger fs-3 me-3"></i>
+                            <div>
+                                <h5>Secure Community</h5>
+                                <p class="mb-0">Experience 24/7 security in a gated community with advanced surveillance systems.</p>
+                            </div>
+                        </div>
+    
+                        <!-- Action Buttons - Moved inside left column -->
+                        <div class="d-flex flex-wrap gap-3 mt-4">  <!-- Improved button layout -->
+                            <a href="vistara#contact" class="btn btn-primary px-4 py-2">📅 Schedule a Visit</a>
+                            <a href="https://drive.google.com/file/d/1O7gcOXfsjMrZxxEe65UG3Z7AJod6gkNJ/view?usp=drive_link"
+                            target="_blank" class="btn btn-secondary px-4 py-2">📄 Request Brochure</a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="d-flex align-items-start mb-4">
-                    <i class="fas fa-route text-primary fs-3 me-3"></i>
-                    <div>
-                        <h5>Easy Connectivity</h5>
-                        <p>Strategically located with quick access to highways, schools, and essential amenities.</p>
+    
+                    <!-- Right Section: Interactive Image Showcase -->
+                    <div class="col-lg-6 text-center ps-lg-5">  <!-- Added ps-lg-5 for left padding -->
+                        <div class="gallery">
+                            <img src="https://lh3.googleusercontent.com/d/16ALWyRDNkpnrM8FLs1OzG_qI8KTLMbng?authuser=0"
+                                alt="Premium Plot" class="img-fluid rounded shadow-lg w-100">  <!-- Added w-100 -->
+                        </div>
                     </div>
-                </div>
-
-                <div class="d-flex align-items-start mb-4">
-                    <i class="fas fa-shield-alt text-danger fs-3 me-3"></i>
-                    <div>
-                        <h5>Secure Community</h5>
-                        <p>Experience 24/7 security in a gated community with advanced surveillance systems.</p>
-                    </div>
-                </div>
-
-                <!-- Action Buttons -->
-                 <div class="col-lg-6 text-center">
-                    <a href="vistara#contact" class="btn btn-primary mt-3 px-4 py-2">📅 Schedule a Visit</a>
-                    <a href="https://drive.google.com/file/d/1O7gcOXfsjMrZxxEe65UG3Z7AJod6gkNJ/view?usp=drive_link"
-                    target="_blank" class="btn btn-secondary mt-3 px-4 py-2">📄 Request Brochure</a>
-                 </div>
-            </div>
-
-            <!-- Right Section: Interactive Image Showcase -->
-            <div class="col-lg-6 text-center">
-                <div class="position-relative gallery">
-                    <img src="https://lh3.googleusercontent.com/d/16ALWyRDNkpnrM8FLs1OzG_qI8KTLMbng?authuser=0"
-                        alt="Premium Plot" class="img-fluid rounded shadow-lg">
-
                 </div>
             </div>
         </div>

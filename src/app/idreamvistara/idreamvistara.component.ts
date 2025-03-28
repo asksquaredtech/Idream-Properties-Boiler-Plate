@@ -9,6 +9,17 @@ import { Router } from '@angular/router';
   styleUrl: './idreamvistara.component.css'
 })
 export class IdreamvistaraComponent implements AfterViewInit {
+  showFormModal = false;
+  openFormModal() {
+    this.showFormModal = true;
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  }
+
+  closeFormModal() {
+    this.showFormModal = false;
+    document.body.style.overflow = ''; // Enable scrolling
+  }
+
   ngAfterViewInit() {
 
     // Spinner
