@@ -422,3 +422,27 @@
       width: 100%;
     }
   }
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* This centers all buttons */
+    gap: 10px; /* Adds space between buttons */
+  }
+  
+  /* If you need specific mobile styles */
+  @media (max-width: 768px) {
+    .hero-buttons {
+      flex-direction: column; /* Stack buttons vertically if needed */
+      align-items: center; /* Center buttons when stacked */
+    }
+    
+    .hero-buttons a,
+    .hero-buttons button {
+      width: 100%; /* Make buttons full width on mobile */
+      max-width: 250px; /* Optional: set a max-width for better appearance */
+    }
+  }
+  .d-flex.flex-wrap.gap-3 {
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px !important; /* Ensure consistent spacing */
+}
