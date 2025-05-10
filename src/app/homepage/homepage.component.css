@@ -129,16 +129,25 @@ body {
   cursor: pointer;
 }
 
-.section.properties { background-color: #4CAF50; }
-.section.cinema { background-color: #2196F3; }
-.section.cricket { background-color: #FF5722; }
+
+.section.properties { background-image: url('../../img/idream properties desc.webp');  
+  background-size: cover; /* Ensures the image fills the section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */}
+.section.cinema { background-image: url('../../img/Idream cinemas desc.webp');background-size: cover; /* Ensures the image fills the section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */ } 
+.section.cricket { background-image: url('../../img/IDTT desc.webp');background-size: cover; /* Ensures the image fills the section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */ } 
 
 .section h2 {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   margin: 20px 0;
   font-size: 24px;
   transition: color 0.3s ease;
+  background-color: #ffffff;
 }
 
 .section .content {
@@ -184,7 +193,7 @@ body {
   
   .section:hover .content {
     bottom: 0;
-    height: 90%;
+    height: 80%;
   }
   
   .section:hover .know-more {

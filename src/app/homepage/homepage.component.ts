@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 declare var $: any;
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -60,7 +61,11 @@ export class HomepageComponent implements AfterViewInit {
 
     this.setupFormSubmit();
   }
+  constructor(private router: Router) { }
 
+  public navigateToFormSuccess() {
+    this.router.navigate(['/formsubmitsuccess']);
+  }
   setupFormSubmit() {
     const form = document.getElementById('contactForm') as HTMLFormElement;
     if (form) {
@@ -72,8 +77,7 @@ export class HomepageComponent implements AfterViewInit {
   }
 
   submitForm(form: HTMLFormElement) {
-    const formData = new FormData(form);
-
+    var formData = new FormData(form);
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
@@ -82,6 +86,7 @@ export class HomepageComponent implements AfterViewInit {
       if (response.ok) {
         this.showSuccessMessage();
         form.reset();
+        this.navigateToFormSuccess();
       } else {
         alert('Something went wrong. Please try again.');
       }

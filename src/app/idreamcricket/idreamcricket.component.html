@@ -3,102 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDream Groups</title>
+    <title>Thamizhans Team</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .navbar-brand, .nav-link {
-            color: #007bff !important;
-            font-weight: 600;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-        .bg-light {
-            background-color: #f8f9fa !important;
-        }
-        .text-primary {
-            color: #007bff !important;
-        }
-        .team-item, .testimonial-item {
+        .team-item {
             transition: transform 0.3s ease;
         }
-        .team-item:hover, .testimonial-item:hover {
-            transform: translateY(-10px);
+        .team-item:hover {
+            transform: scale(1.05);
         }
-        .footer {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px 0;
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .wow {
+            visibility: hidden; /* For wow.js animations */
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">IDTT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#stats">Stats</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#thamizhans">Our Thamizhans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sponsors">Our Sponsors</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header Section -->
-    <div id="home" class="container-fluid header bg-white p-0">
-        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-            <div class="col-sm-12 animated fadeIn">
-                <div class="owl-carousel header-carousel">
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid" src="https://pbs.twimg.com/media/E7Uf5icVgAIAHda.jpg" alt="">
-                    </div>
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1RPgl4FtF-u9Xjs1-zi2M26AnKwdfr6j6?authuser=0" alt="">
-                    </div>
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1fg7omGN0IqTPT_XsrN8jPbHvQq3WLfMp?authuser=0" alt="">
-                    </div>
-                    <div class="owl-carousel-item">
-                        <img class="img-fluid" src="https://pbs.twimg.com/media/E7Uf5icVgAIAHda.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+   <!-- Header Section -->
+<div class="container-fluid p-0">
+    <div class="row g-0">
+        <!-- Full-Width Image -->
+        <div class="col-12">
+            <img class="img-fluid w-100" src="https://pbs.twimg.com/media/E7Uf5icVgAIAHda.jpg" alt="Header Image" style="height: auto;">
         </div>
     </div>
+</div>
 
     <!-- News Section -->
     <div id="news" class="container-xxl py-5">
@@ -146,32 +82,32 @@
     <div id="stats" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">Our Stats</h1>
-                <p>Here are some impressive stats about our achievements.</p>
+                <h1 class="mb-3">Team Performance Stats</h1>
+                <p>Tracking our team's top performances and achievements over the seasons.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-light text-center rounded p-4">
-                        <h2 class="text-primary mb-0" data-toggle="counter-up">1234</h2>
-                        <p class="mb-0">Projects Completed</p>
+                        <h2 class="text-primary mb-0" data-toggle="counter-up">85,230</h2>
+                        <p class="mb-0">Total Runs Scored 🏏</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-light text-center rounded p-4">
-                        <h2 class="text-primary mb-0" data-toggle="counter-up">567</h2>
-                        <p class="mb-0">Happy Clients</p>
+                        <h2 class="text-primary mb-0" data-toggle="counter-up">1,450</h2>
+                        <p class="mb-0">Total Wickets Taken 🎯</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light text-center rounded p-4">
-                        <h2 class="text-primary mb-0" data-toggle="counter-up">89</h2>
-                        <p class="mb-0">Awards Won</p>
+                        <h2 class="text-primary mb-0" data-toggle="counter-up">40</h2>
+                        <p class="mb-0">Matches Played 📅</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="bg-light text-center rounded p-4">
-                        <h2 class="text-primary mb-0" data-toggle="counter-up">24</h2>
-                        <p class="mb-0">Years of Experience</p>
+                        <h2 class="text-primary mb-0" data-toggle="counter-up">2</h2>
+                        <p class="mb-0">Playoff Appearances 🏆</p>
                     </div>
                 </div>
             </div>
@@ -186,23 +122,247 @@
                 <p>Meet the talented players of our Thamizhans team.</p>
             </div>
             <div class="row g-4">
+                <!-- Player 1 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 1">
                         </div>
                         <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Player Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Player 1</h5>
+                            <small>Batsman</small>
                         </div>
                     </div>
                 </div>
-                <!-- Repeat for other players -->
+                <!-- Player 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 2">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 2</h5>
+                            <small>Bowler</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 3">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 3</h5>
+                            <small>All-Rounder</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 4">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 4</h5>
+                            <small>Wicketkeeper</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for Players 5 to 20 -->
+                <!-- Player 5 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 5">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 5</h5>
+                            <small>Batsman</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 6 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 6">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 6</h5>
+                            <small>Bowler</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 7 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 7">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 7</h5>
+                            <small>All-Rounder</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 8 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 8">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 8</h5>
+                            <small>Wicketkeeper</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 9 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 9">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 9</h5>
+                            <small>Batsman</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 10 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 10">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 10</h5>
+                            <small>Bowler</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 11 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 11">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 11</h5>
+                            <small>All-Rounder</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 12 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 12">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 12</h5>
+                            <small>Wicketkeeper</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 13 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 13">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 13</h5>
+                            <small>Batsman</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 14 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 14">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 14</h5>
+                            <small>Bowler</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 15 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 15">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 15</h5>
+                            <small>All-Rounder</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 16 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 16">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 16</h5>
+                            <small>Wicketkeeper</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 17 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 17">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 17</h5>
+                            <small>Batsman</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 18 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 18">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 18</h5>
+                            <small>Bowler</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 19 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 19">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 19</h5>
+                            <small>All-Rounder</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 20 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://via.placeholder.com/300x400" alt="Player 20">
+                        </div>
+                        <div class="text-center p-4 mt-3">
+                            <h5 class="fw-bold mb-0">Player 20</h5>
+                            <small>Wicketkeeper</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -220,20 +380,33 @@
                         <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 1">
                     </div>
                 </div>
-                <!-- Repeat for other sponsors -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-light text-center rounded p-4">
+                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 2">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light text-center rounded p-4">
+                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 3">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="bg-light text-center rounded p-4">
+                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 4">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="bg-light text-center rounded p-4">
+                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 5">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer text-center">
-        <p>&copy; 2025 IDream Groups. All rights reserved.</p>
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
+    <!-- Bootstrap JS (with Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
     <script>
         // Initialize counters
         const counters = document.querySelectorAll('.counter-up');

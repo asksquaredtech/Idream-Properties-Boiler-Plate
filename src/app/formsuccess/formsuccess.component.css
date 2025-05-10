@@ -1,0 +1,98 @@
+.thank-you-container {
+    display: flex;
+    flex-direction: initial;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    background: white;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 10vh;
+  }
+  
+  .content {
+    animation: fadeInUp 0.8s ease forwards;
+    z-index: 10;
+  }
+  
+  .icon {
+    font-size: 48px;
+    color: #FF6F00;
+    margin-bottom: 16px;
+  }
+  
+  .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #FF6F00;
+    margin-bottom: 8px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 24px;
+  }
+  
+  button {
+    background: #FF6F00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  a {
+    display: block;
+    margin-top: 16px;
+    color: #FF6F00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Confetti animations */
+  .popper {
+    position: absolute;
+    font-size: 24px;
+    color: #FF6F00;
+    opacity: 0;
+  }
+  
+  .popper-left { animation: popperLeft 1.5s ease-out forwards; }
+  .popper-right { animation: popperRight 1.5s ease-out forwards; }
+  .delay-1 { animation-delay: 0.3s; }
+  
+  /* Keyframes */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes popperLeft {
+    0% { opacity: 0; transform: translate(-50px, 50px) rotate(-45deg) scale(0); }
+    100% { opacity: 1; transform: translate(0, 0) rotate(-45deg) scale(1); }
+  }
+  
+  @keyframes popperRight {
+    0% { opacity: 0; transform: translate(50px, 50px) rotate(45deg) scale(0); }
+    100% { opacity: 1; transform: translate(0, 0) rotate(45deg) scale(1); }
+  }
+  

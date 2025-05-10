@@ -1,0 +1,30 @@
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16827617620"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16827617620');
+</script>
+</head>
+<div class="container-xxl bg-white p-0"> 
+<div class="thank-you-container" (window:load)="createConfetti()">
+    <div class="popper popper-left"><i class="ri-party-fill"></i></div>
+    <div class="popper popper-right"><i class="ri-party-fill"></i></div>
+    <div class="popper popper-left delay-1"><i class="ri-heart-fill"></i></div>
+    <div class="popper popper-right delay-1"><i class="ri-heart-fill"></i></div>
+
+    <div class="content">
+        <div class="icon"><i class="ri-customer-service-2-fill"></i></div>
+        <!-- <div class="logo"><img src="https:/img/image.png"></div> -->
+        <div class="logo"><img class="img-fluid" src="../../img/IMG-20250110-WA0024.jpg" alt="Icon" style="width: 280px; height: 150px;"></div>
+        <h1>Thank you for contacting us!</h1>
+        <p>Our agent will get back to you soon.</p>
+
+        <button (click)="navigateToHome()">Return to Home</button>
+        <a href="properties" target="_self">Browse other Properties</a>
+    </div>
+</div>
+</div>  
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">

@@ -1,43 +1,52 @@
-<div class="containerx">
-    <!-- Properties Section -->
-    <div class="section properties">
-      <h2>Properties</h2>
-      <div class="content">
-        <ul>
-          <li>Point 1 about Properties</li>
-          <li>Point 2 about Properties</li>
-          <li>Point 3 about Properties</li>
-        </ul>
-        <a href="#" class="view-more">View More</a>
-      </div>
-      <button class="know-more">Know More</button>
-    </div>
-  
-    <!-- Cinema Section -->
-    <div class="section cinema">
-      <h2>Cinema</h2>
-      <div class="content">
-        <ul>
-          <li>Point 1 about Cinema</li>
-          <li>Point 2 about Cinema</li>
-          <li>Point 3 about Cinema</li>
-        </ul>
-        <a href="#" class="view-more">View More</a>
-      </div>
-      <button class="know-more">Know More</button>
-    </div>
-  
-    <!-- Cricket Section -->
-    <div class="section cricket">
-      <h2>Cricket</h2>
-      <div class="content">
-        <ul>
-          <li>Point 1 about Cricket</li>
-          <li>Point 2 about Cricket</li>
-          <li>Point 3 about Cricket</li>
-        </ul>
-        <a href="#" class="view-more">View More</a>
-      </div>
-      <button class="know-more">Know More</button>
-    </div>
+
+  <div class="container-xxl bg-white p-0">
+    <section class="hero">
+        <div class="hero-image">
+            <img src="" alt="Luxury Property">
+        </div>
+        <div class="hero-content">
+            <h1>Experience Luxury Living at Vistara</h1>
+            <p>Discover your dream home in the heart of the city with breathtaking views and world-class amenities.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Schedule a Visit</button>
+                <button class="btn-secondary">Download Brochure</button>
+            </div>
+        </div>
+        <div class="hero-form">
+            <h3>Request Information</h3>
+            <form id="contactForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Preferred Time to Contact</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                    <option value="evening">Evening (4 PM - 7 PM)</option>
+                </select>
+                <button type="submit" class="btn-submit">Get in Touch</button>
+            </form>
+        </div>
+    </section>
   </div>
+    <!-- <script src="hero.js"></script> -->
+
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const successMessage = document.createElement('div');
+    successMessage.className = 'success-message';
+    successMessage.textContent = 'Thank you for your interest! We will contact you soon.';
+    
+    document.body.appendChild(successMessage);
+    
+    setTimeout(() => {
+        successMessage.remove();
+    }, 3000);
+    
+    this.reset();
+});
+
+</script>

@@ -1,0 +1,5 @@
+@media (max-width: 480px) {
+    .gallery img{
+      max-height: 200px;
+    }
+}
