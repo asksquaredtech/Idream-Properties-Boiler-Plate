@@ -4,6 +4,8 @@ import { filter } from 'rxjs/operators';
 import { GoogleTagManagerService } from 'angular-google-tag-manager';
 import { ViewportScroller, Location } from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { or } from 'firebase/firestore';
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         // Hide navbar for specific routes
         this.showNavbar = !event.url.includes('/tiruppurTamilans');
+        //this.showNavbar = !event.url.includes('/second');
         console.log(this.showNavbar)
       }
     });
@@ -38,8 +41,18 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.setupRouteTracking();
   }
-
-  private setupRouteTracking() {
+  ngAfterViewInit() {
+    // Spinner
+    var spinner = function () {
+      setTimeout(function () {
+        if ($('#spinner').length > 0) {
+          $('#spinner').removeClass('show');
+        }
+      }, 1);
+    };
+    spinner();
+  }
+  public setupRouteTracking() {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -55,12 +68,12 @@ export class AppComponent implements OnInit {
     });
   }
 
-  navigateWithReload(path: string) {
+  public navigateWithReload(path: string) {
     // Full page navigation with base href
     window.location.href = `${this.baseHref}${path.startsWith('/') ? path : '/' + path}`;
   }
 
-  scrollToLeadership() {
+  public scrollToLeadership() {
     if (this.currentRoute === '/') {
       // Already on home page, just scroll
       setTimeout(() => {
@@ -74,7 +87,7 @@ export class AppComponent implements OnInit {
     this.trackEvent('navigation', 'leadership-section');
   }
 
-  scrollToContactUs() {
+  public scrollToContactUs() {
     if (this.currentRoute === '/') {
       setTimeout(() => {
         this.viewportScroller.scrollToAnchor('contact');
@@ -86,7 +99,7 @@ export class AppComponent implements OnInit {
     this.trackEvent('navigation', 'contact-section');
   }
 
-  isBusinessesActive(): boolean {
+  public isBusinessesActive(): boolean {
     return [
       '/properties',
       '/cinemas',
@@ -94,7 +107,7 @@ export class AppComponent implements OnInit {
     ].some(route => this.currentRoute.startsWith(route));
   }
 
-  trackEvent(action: string, label: string) {
+  public trackEvent(action: string, label: string) {
     const gtmTag = {
       event: 'user_action',
       action: action,
@@ -103,7 +116,7 @@ export class AppComponent implements OnInit {
     this.gtmService.pushTag(gtmTag);
   }
 
-  private trackPageView() {
+  public trackPageView() {
     const gtmTag = {
       event: 'page_view',
       page_path: `${this.baseHref}${this.currentRoute}`,
