@@ -49,67 +49,71 @@
 <!-- Spinner End -->
 
 <!-- Navbar Start -->
-<div class="container-fluid nav-bar bg-transparent">
-    <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-        <a href="/Idream/home" class="navbar-brand d-flex align-items-center text-center">
-            <div class="">
-                <img class="img-fluid" src="../../img/image.png" alt="Icon" style="width: 60px; height: 60px;">
-            </div>
-            <h1 class="m-0 text-primary"></h1>
-            <img class="img-fluid" src="../../img/IMG-20250110-WA0023.jpg" alt="Icon" style="width: 150px; height: 50px;margin-left:20px">
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-                <!-- Home Link -->
-                <a href="/Idream/home" 
-                   class="nav-item nav-link" 
-                   [class.active]="currentRoute === '/home'">Idream Group</a>
-                
-                <!-- Businesses Dropdown -->
-                <div class="nav-item dropdown">
-                    <a href="/Idream/home" 
-                       class="nav-link dropdown-toggle" 
-                       [class.active]="isBusinessesActive()"
-                       data-bs-toggle="dropdown">Businesses</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="/Idream/properties" 
-                           class="dropdown-item" 
-                           [class.active]="currentRoute === '/properties'">Idream Properties</a>
-                        <a href="/Idream/cinemas" 
-                           class="dropdown-item" 
-                           [class.active]="currentRoute === '/cinemas'">Idream Cinemas</a>
-                        <a href="/Idream/tiruppurTamilans" 
-                           class="dropdown-item" 
-                           [class.active]="currentRoute === '/tiruppurTamilans'">Idream Tiruppur Thamizhans</a>
-                    </div>
-                </div>
-                
-                <!-- Leadership Link -->
-                <a href="home/#leadership"
-                   class="nav-item nav-link"
-                   [class.active]="currentRoute === '/' && currentFragment === 'leadership'">Leadership</a>
-                
-                <!-- Joint Venture Link -->
-                <a href="/Idream/jointventures"
-                   class="nav-item nav-link"
-                   [class.active]="currentRoute === '/jointventures'">Joint Venture</a>
-                
-                <!-- Contact Us Link -->
-                <a href="home/#contact"
-                   class="nav-item nav-link"
-                   [class.active]="currentRoute === '/' && currentFragment === 'contact'">Contact Us</a>
-            </div>
+<ng-container *ngIf="showNavbar">
+<div class="container-fluid nav-bar bg-transparent" >
+    <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4" >
+    <a href="/Idream/home" class="navbar-brand d-flex align-items-center text-center">
+        <div class="">
+            <img class="img-fluid" src="../../img/image.png" alt="Icon" style="width: 60px; height: 60px;">
         </div>
+        <h1 class="m-0 text-primary"></h1>
+        <img class="img-fluid" src="../../img/IMG-20250110-WA0023.jpg" alt="Icon" style="width: 150px; height: 50px;margin-left:20px">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+            <!-- Home Link -->
+            <a href="/Idream/home" 
+                class="nav-item nav-link" 
+                [class.active]="currentRoute === '/home'">Idream Group</a>
+            
+            <!-- Businesses Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="/Idream/home" 
+                    class="nav-link dropdown-toggle" 
+                    [class.active]="isBusinessesActive()"
+                    data-bs-toggle="dropdown">Businesses</a>
+                <div class="dropdown-menu rounded-0 m-0">
+                    <a href="/Idream/properties" 
+                        class="dropdown-item" 
+                        [class.active]="currentRoute === '/properties'">Idream Properties</a>
+                    <a href="/Idream/cinemas" 
+                        class="dropdown-item" 
+                        [class.active]="currentRoute === '/cinemas'">Idream Cinemas</a>
+                    <a href="/Idream/tiruppurTamilans" 
+                        class="dropdown-item" 
+                        [class.active]="currentRoute === '/tiruppurTamilans'">Idream Tiruppur Thamizhans</a>
+                </div>
+            </div>
+            
+            <!-- Leadership Link -->
+            <a href="home/#leadership"
+                class="nav-item nav-link"
+                [class.active]="currentRoute === '/' && currentFragment === 'leadership'">Leadership</a>
+            
+            <!-- Joint Venture Link -->
+            <a href="/Idream/jointventures"
+                class="nav-item nav-link"
+                [class.active]="currentRoute === '/jointventures'">Joint Venture</a>
+            
+            <!-- Contact Us Link -->
+            <a href="home/#contact"
+                class="nav-item nav-link"
+                [class.active]="currentRoute === '/' && currentFragment === 'contact'">Contact Us</a>
+        </div>
+    </div>
     </nav>
-</div><!-- Navbar End -->
+</div>
+</ng-container>
+<!-- Navbar End -->
 
     <router-outlet>
     <router-outlet/>
 
 <!-- Footer Start -->
+<ng-container *ngIf="showNavbar">
 <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
@@ -188,4 +192,5 @@
         </div>
     </div>
 </div>
+</ng-container>
 <!-- Footer End -->

@@ -3,11 +3,12 @@ import { Router, NavigationEnd, ActivatedRoute, RouterOutlet, RouterLink } from 
 import { filter } from 'rxjs/operators';
 import { GoogleTagManagerService } from 'angular-google-tag-manager';
 import { ViewportScroller, Location } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit {
   currentRoute: string = '';
   currentFragment: string | null = null;
   baseHref: string = '/Idream'; // Set your base href here
+  showNavbar = true;
 
   constructor(
     private gtmService: GoogleTagManagerService,
@@ -23,7 +25,15 @@ export class AppComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private viewportScroller: ViewportScroller,
     private location: Location
-  ) {}
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Hide navbar for specific routes
+        this.showNavbar = !event.url.includes('/tiruppurTamilans');
+        console.log(this.showNavbar)
+      }
+    });
+  }
 
   ngOnInit() {
     this.setupRouteTracking();

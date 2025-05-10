@@ -18,7 +18,6 @@ import { GtmService } from './gtm.service';
       id: 'AW-16827617620',
     }),
   ],
-  bootstrap: [AppComponent],
   providers: [{provide: 'googleTagManagerId', useValue:"AW-16827617620"}],
 })
 export class AppModule {
