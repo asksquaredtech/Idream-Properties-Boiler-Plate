@@ -9,9 +9,11 @@ import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig } from '../environments/environments';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { GtmService } from './gtm.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CommonModule,
     ReactiveFormsModule, // Add ReactiveFormsModule here
     GoogleTagManagerModule.forRoot({
