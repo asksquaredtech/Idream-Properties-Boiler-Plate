@@ -1,13 +1,6 @@
-import {
-  trigger,
-  transition,
-  style,
-  animate
-} from '@angular/animations'; 
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from '../app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // ⬅️ only needed once in AppModule
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-idreamcricket',
@@ -15,17 +8,7 @@ import { Component } from '@angular/core';
   imports: [RouterModule, CommonModule],
   templateUrl: './idreamcricket.component.html',
   styleUrl: './idreamcricket.component.css',
-  animations: [
-    trigger('fadeSlide', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateX(30px)' }),
-        animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-      ]),
-      transition(':leave', [
-        animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(-30px)' }))
-      ])
-    ])
-  ]
+
 })
 export class IdreamcricketComponent extends AppComponent {
   currentIndex = 0;
