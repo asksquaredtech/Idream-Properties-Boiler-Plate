@@ -385,7 +385,43 @@
             </div>
         </div>
     </div>
-    
+    <div class="player-slider">
+        <div class="player-slide active">
+          <div class="slide-content">
+            <div class="player-image">
+              <img [src]="currentPlayer.imageUrl" [alt]="currentPlayer.name + ' ' + currentPlayer.surname" />
+            </div>
+            <div class="player-info">
+              <h2 class="player-name">{{ currentPlayer.name }} <span>{{ currentPlayer.surname }}</span></h2>
+              <div class="player-role">
+                <span *ngFor="let r of currentPlayer.role; let last = last">
+                  {{ r }}<span *ngIf="!last"> | </span>
+                </span> | {{ currentPlayer.flag }} {{ currentPlayer.country }}
+              </div>
+              <div class="player-stats">
+                <div>
+                  <strong>Matches</strong>
+                  <p>{{ currentPlayer.matches }}</p>
+                </div>
+                <div>
+                  <strong>Runs</strong>
+                  <p>{{ currentPlayer.runs }}</p>
+                </div>
+              </div>
+              <div class="player-buttons">
+                <button class="btn pink">View Profile</button>
+                <button class="btn outline">Buy Merchandise</button>
+              </div>
+            </div>
+          </div>
+      
+          
+          <button class="nav-arrow left" (click)="prevSlide()">❮</button>
+          <button class="nav-arrow right" (click)="nextSlide()">❯</button>
+        </div>
+      </div>
+      
+      
     <!-- Our Thamizhans Section -->
     <div id="thamizhans" class="container-xxl py-5">
         <div class="container">
