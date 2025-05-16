@@ -97,3 +97,82 @@ body {
     }
   }
   
+  .fix-container {
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .fix-fixture {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9ff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .fix-fixture:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fix-info {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .fix-teams {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .fix-team-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fix-team-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 8px;
+  }
+  
+  .fix-team-name {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #222;
+  }
+  
+  .fix-vs {
+    font-weight: bold;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  @media (max-width: 600px) {
+    .fix-teams {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .fix-vs {
+      margin: 10px 0;
+    }
+  }
+  .fix-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 8px;
+  }  

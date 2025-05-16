@@ -29,6 +29,118 @@ export class SecondpageComponent {
     });
   }
 
+  // Define the mapping of team names to their respective logo URLs
+teamLogos: { [key: string]: string } = {
+  'IDream Tiruppur Tamizhans': 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0',
+  'Chepauk Super Gillies': 'https://lh3.googleusercontent.com/d/1880mOnW5_AtKaF4s2O_O4X6QPybXHx1z?authuser=0',
+  'Dindigul Dragons': 'https://lh3.googleusercontent.com/d/1S5T7tb-ILpo5w798FIMzHfHAqfFDQk4s?authuser=0',
+  'SKM Salem Spartans': 'https://lh3.googleusercontent.com/d/1l5adfwFEUoHJ_JMK8oCak1zE3mPhqQb3?authuser=0',
+  'Trichy Grand Cholas': 'https://lh3.googleusercontent.com/d/1D2LQJ9jmwi0gT_Xzry99G3Qm0FYdpHOn?authuser=0',
+  'Siechem Madurai Panthers': 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/SMP.png',
+  'Lyca Kovai Kings': 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/LKK.png',
+  'Nellai Royal Kings': 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/NRK.png',
+  // Add more teams as needed
+};
+
+// Function to retrieve the logo URL based on the team name
+getTeamLogo(teamName: string): string {
+  return this.teamLogos[teamName] || 'https://via.placeholder.com/50';
+}
+
+  fixtures = [
+    {
+      date: '06 JUN 2025',
+      time: '19:15',
+      venue: 'Sri Ramakrishna College of Arts and Science Cricket Ground, Coimbatore',
+      team1: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      },
+      team2: {
+        name: 'Chepauk Super Gillies',
+        logo: 'https://lh3.googleusercontent.com/d/1880mOnW5_AtKaF4s2O_O4X6QPybXHx1z?authuser=0'
+      }
+    },
+    {
+      date: '08 JUN 2025',
+      time: '19:15',
+      venue: 'Sri Ramakrishna College of Arts and Science Cricket Ground, Coimbatore',
+      team1: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      },
+      team2: {
+        name: 'Dindigul Dragons',
+        logo: 'https://lh3.googleusercontent.com/d/1S5T7tb-ILpo5w798FIMzHfHAqfFDQk4s?authuser=0'
+      }
+    },
+    {
+      date: '13 JUN 2025',
+      time: '19:15',
+      venue: 'Salem Cricket Foundation Ground, Salem',
+      team1: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      },
+      team2: {
+        name: 'SKM Salem Spartans',
+        logo: 'https://lh3.googleusercontent.com/d/1l5adfwFEUoHJ_JMK8oCak1zE3mPhqQb3?authuser=0'
+      }
+    },
+    {
+      date: '15 JUN 2025',
+      time: '15:15',
+      venue: 'Salem Cricket Foundation Ground, Salem',
+      team1: {
+        name: 'Trichy Grand Cholas',
+        logo: 'https://lh3.googleusercontent.com/d/1D2LQJ9jmwi0gT_Xzry99G3Qm0FYdpHOn?authuser=0'
+      },
+      team2: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      }
+    },
+    {
+      date: '22 JUN 2025',
+      time: '19:15',
+      venue: 'Chennai Super Kings Ground, Sankar Nagar, Tirunelveli',
+      team1: {
+        name: 'Siechem Madurai Panthers',
+        logo: 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/SMP.png'
+      },
+      team2: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      }
+    },
+    {
+      date: '24 JUN 2025',
+      time: '19:15',
+      venue: 'Chennai Super Kings Ground, Sankar Nagar, Tirunelveli',
+      team1: {
+        name: 'Lyca Kovai Kings',
+        logo: 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/LKK.png'
+      },
+      team2: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      }
+    },
+    {
+      date: '29 JUN 2025',
+      time: '15:15',
+      venue: 'NPR College Ground, Dindigul',
+      team1: {
+        name: 'IDream Tiruppur Tamizhans',
+        logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
+      },
+      team2: {
+        name: 'Nellai Royal Kings',
+        logo: 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/NRK.png'
+      }
+    }
+  ];
+
   public getLatestMatches(): Observable<any[]> {
     return this.http.get<any>(this.apiUrl, { headers: this.headers }).pipe(
       map((response) => {
