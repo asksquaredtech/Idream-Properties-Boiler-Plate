@@ -363,3 +363,54 @@ body {
 .block{
   height:100vh;
 }
+@media (max-width: 768px) {
+  .header-carousel .owl-carousel-item img {
+    max-height: 250px;
+  }
+}
+/* Default (desktop) styling for navigation arrows */
+.header-carousel .owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem; /* Icon size */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* Position arrows */
+.header-carousel .owl-prev {
+  left: 10px;
+}
+.header-carousel .owl-next {
+  right: 10px;
+}
+
+/* Mobile-specific styling for smaller arrows */
+@media (max-width: 768px) {
+  .header-carousel .owl-nav button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Center the arrows horizontally */
+  .header-carousel .owl-prev,
+  .header-carousel .owl-next {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+
+
