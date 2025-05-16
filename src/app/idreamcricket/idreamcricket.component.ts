@@ -2,10 +2,12 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from '../app.component';
 import { Component } from '@angular/core';
+import { SecondpageComponent } from '../secondpage/secondpage.component';
+
 @Component({
   selector: 'app-idreamcricket',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, SecondpageComponent],
   templateUrl: './idreamcricket.component.html',
   styleUrl: './idreamcricket.component.css',
 
@@ -206,4 +208,5 @@ export class IdreamcricketComponent extends AppComponent {
   get currentPlayer() {
     return this.players[this.currentIndex];
   }
+  
 }

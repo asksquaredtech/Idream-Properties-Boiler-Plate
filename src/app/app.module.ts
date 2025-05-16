@@ -10,6 +10,9 @@ import { firebaseConfig } from '../environments/environments';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { GtmService } from './gtm.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -19,8 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GoogleTagManagerModule.forRoot({
       id: 'AW-16827617620',
     }),
+    HttpClientModule
   ],
-  providers: [{provide: 'googleTagManagerId', useValue:"AW-16827617620"}],
+  providers: [{provide: 'googleTagManagerId', useValue:"AW-16827617620"},provideHttpClient()],
 })
 export class AppModule {
 }
