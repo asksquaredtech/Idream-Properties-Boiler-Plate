@@ -1,3 +1,11 @@
+.background {
+  background-image: url('../../img/IDTT background home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: for parallax-like effect */
+}
+
 /* Base styles for the navigation bar */
 .nav-bar {
   margin-top: 0px;
@@ -87,9 +95,13 @@
 .player-slider {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   background: linear-gradient(to right, #1a0033, #300060);
+  background-image: url('../../img/IDTTplayerslider2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   align-items: center;
@@ -140,9 +152,12 @@
   font-size: 48px;
   font-weight: bold;
 }
-
+.title{
+  background-color: #fd0073;
+  text-align: center;
+}
 .player-name span {
-  color: #ff0099;
+  color: #012ecc;
 }
 
 .player-role {

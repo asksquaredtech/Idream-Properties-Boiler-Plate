@@ -12,9 +12,48 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./secondpage.component.css']
 })
 export class SecondpageComponent {
-  matches: any[] = [];
+  // matches: any[] = [];
   private apiUrl = 'https://cricbuzz-cricket2.p.rapidapi.com/teams/v1/861/results';
-
+  //private apiUrl = '';
+  matches : any[] = [
+    {
+      team1Name: 'IDream Tiruppur Tamizhans',
+      team1Score: '180/5',
+      team1Overs: '20.0',
+      team2Name: 'Dindigul Dragons',
+      team2Score: '175/7',
+      team2Overs: '20.0',
+      date: '2025-05-20',
+      time: '19:30',
+      venue: 'Wankhede Stadium, Mumbai',
+      status: 'Mumbai Indians won by 5 runs'
+    },
+    {
+      team1Name: 'Lyca Kovai Kings',
+      team1Score: '200/3',
+      team1Overs: '20.0',
+      team2Name: 'IDream Tiruppur Tamizhans',
+      team2Score: '198/6',
+      team2Overs: '20.0',
+      date: '2025-05-21',
+      time: '19:30',
+      venue: 'M. Chinnaswamy Stadium, Bangalore',
+      status: 'Royal Challengers Bangalore won by 2 runs'
+    },
+    {
+      team1Name: 'IDream Tiruppur Tamizhans',
+      team1Score: '150/8',
+      team1Overs: '20.0',
+      team2Name: 'Nellai Royal Kings',
+      team2Score: '151/5',
+      team2Overs: '19.4',
+      date: '2025-05-22',
+      time: '19:30',
+      venue: 'Arun Jaitley Stadium, Delhi',
+      status: 'Sunrisers Hyderabad won by 5 wickets'
+    }
+    // Add more matches as needed
+  ];
   private headers = new HttpHeaders({
     'X-RapidAPI-Key': '8810bb3697msh7760e535fa79cc6p17e37djsn10b632093e41',
     'X-RapidAPI-Host': 'cricbuzz-cricket2.p.rapidapi.com',
@@ -22,7 +61,7 @@ export class SecondpageComponent {
   });
 
   constructor(private http: HttpClient) {}
-
+  
   ngOnInit(): void {
     this.getLatestMatches().subscribe((data) => {
       this.matches = data;

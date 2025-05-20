@@ -1,29 +1,30 @@
 <div class="fix-container">
   <div *ngFor="let match of matches" class="fix-card">
     
+    <div class="fix-fixture">
+        <div class="fix-teams">
+        <div class="fix-team">
+            <img [src]="getTeamLogo(match.team1Name)" [alt]="match.team1Name" class="fix-logo" />
+            <div class="fix-team-name">{{ match.team1Name }}</div>
+            <div class="fix-score">{{ match.team1Score }} ({{ match.team1Overs }} ov)</div>
+        </div>
 
-    <div class="fix-teams">
-      <div class="fix-team">
-        <img [src]="getTeamLogo(match.team1Name)" [alt]="match.team1Name" class="fix-logo" />
-        <div class="fix-team-name">{{ match.team1Name }}</div>
-        <div class="fix-score">{{ match.team1Score }} ({{ match.team1Overs }} ov)</div>
-      </div>
+        <div class="fix-vs">VS</div>
 
-      <div class="fix-vs">VS</div>
+        <div class="fix-team">
+            <img [src]="getTeamLogo(match.team2Name)" [alt]="match.team2Name" class="fix-logo" />
+            <div class="fix-team-name">{{ match.team2Name }}</div>
+            <div class="fix-score">{{ match.team2Score }} ({{ match.team2Overs }} ov)</div>
+        </div>
+        </div>
 
-      <div class="fix-team">
-        <img [src]="getTeamLogo(match.team2Name)" [alt]="match.team2Name" class="fix-logo" />
-        <div class="fix-team-name">{{ match.team2Name }}</div>
-        <div class="fix-score">{{ match.team2Score }} ({{ match.team2Overs }} ov)</div>
-      </div>
+        <div class="fix-info">
+            <div class="fix-date">{{ match.date | date: 'dd MMM yyyy' }}</div>
+            <div class="fix-time">{{ match.time }}</div>
+            <div class="fix-venue">{{ match.venue }}</div>
+        <div class="fix-status">{{ match.status }}</div>
+        </div>
     </div>
-
-    <div class="fix-info">
-        <div class="fix-date">{{ match.date | date: 'dd MMM yyyy' }}</div>
-        <div class="fix-time">{{ match.time }}</div>
-        <div class="fix-venue">{{ match.venue }}</div>
-    <div class="fix-status">{{ match.status }}</div>
-      </div>
   </div>
 </div>
 
