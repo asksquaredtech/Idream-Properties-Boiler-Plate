@@ -1,5 +1,5 @@
 .background {
-  background-image: url('../../img/IDTT background home.png');
+  /*background-image: url('../../img/IDTT background home.png');*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -13,7 +13,62 @@
   padding: 0 3rem;
   transition: .5s;
   z-index: 9999;
-  background-color: #002db2;
+  background-color: #081a2d;
+}
+
+/* Responsive padding on navbar */
+@media (max-width: 991.98px) {
+  .nav-bar {
+    padding: 0 1rem;
+  }
+}
+
+/* Avoid conflict with .bg-white class */
+/* Rename or remove from navbar to avoid overriding bg-color */
+/* If you want to keep it, rename like: */
+/* .bg-radial-gradient { */
+/*   background: radial-gradient(circle, rgba(255, 0, 121, 1) 88%, rgba(0, 45, 178, 1) 100%, rgba(233, 215, 224, 1) 3%); */
+/* } */
+
+/* Center logo image */
+.navbar-brand {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.navbar-brand img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 130px; /* matches your previous inline style */
+  width: auto; /* keep aspect ratio */
+}
+
+/* Nav menus flex */
+.navbar-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Stack nav links on mobile */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Navbar toggler spacing and appearance */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.75rem;
+  margin-right: 1rem;
+}
+
+/* Ensure collapse menu overlays content */
+.navbar-collapse {
+  z-index: 1050;
 }
 
 /* Raleway Bold */
@@ -47,7 +102,7 @@
 .navbar-nav .nav-link {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #002cb0; /* Navy Blue */
+  color: #fff; /* Navy Blue */
   transition: color 0.3s ease;
 }
 
@@ -70,21 +125,7 @@
   color: #ffffff;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    background-color: #ffffff;
-    padding: 10px;
-  }
-}
-
 /* Background Styles */
-.bg-white {
-  --bs-bg-opacity: 1;
-  background: #FF0079;
-  background: radial-gradient(circle, rgba(255, 0, 121, 1) 88%, rgba(0, 45, 178, 1) 100%, rgba(233, 215, 224, 1) 3%);
-}
-
 .bg-dark {
   --bs-bg-opacity: 1;
   background: #002CB0;
@@ -345,36 +386,120 @@
 
 .venue {
   font-size: 0.8em; /* Adjust as needed */
-  color: #555;
+  color: #999;
 }
 
-.teams-middle {
+.match-details-right {
   display: flex;
-  align-items: center; /* Vertically center teams and VS */
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
 }
 
 .team {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #000; /* Default text color */
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Hover effect on the team */
+.team:hover {
+  color: #e9d7e0;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.player-row {
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 10px; /* Adjust spacing between teams */
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.team-logo {
-  width: 40px; /* Adjust logo size as needed */
-  height: auto;
-  margin-bottom: 2px; /* Adjust spacing */
+.player-info-col {
+  flex-basis: 35%;
 }
 
-.team-name {
-  font-size: 0.8em; /* Adjust as needed */
-  color: #444;
-  text-align: center;
-  white-space: nowrap; /* Prevent team names from wrapping */
+.player-stats-col {
+  flex-basis: 30%;
 }
 
-.vs {
-  font-size: 1.2em; /* Adjust as needed */
-  color: #999;
-  margin: 0 10px; /* Adjust spacing around VS */
+.player-pic-col {
+  flex-basis: 30%;
+}
+
+.player-info-col h2,
+.player-stats-col h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.player-pic {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 20px;
+  border: 3px solid #002db2;
+}
+
+.players-content {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #002cb0;
+}
+
+/* Team lineups */
+.lineup-section {
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #002cb0;
+}
+
+/* Additional spacing between lineup players */
+.lineup-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.lineup-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* General text */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Other global styles, e.g. buttons, inputs, etc. */
+/* ... */
+
+/* Make sure you keep your bootstrap imports or fonts imported in HTML */
+.navbar-nav {
+  gap: 0.5rem;
+  
+   /* Controls spacing between nav links */
+}
+#leftMenu .navbar-nav {
+  /* Example styles */
+  /* align items to the right */
+  padding-left: 120pt;
+}
+#rightMenu .navbar-nav {
+  /* Example styles */
+  /* align items to the right */
+  padding-right: 110pt;
+}
+.navbar-brand {
+  margin: 0 2.5rem;
 }

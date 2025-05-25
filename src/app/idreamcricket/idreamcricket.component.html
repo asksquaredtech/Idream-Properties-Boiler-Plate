@@ -25,52 +25,87 @@
         .wow {
             visibility: hidden; /* For wow.js animations */
         }
+        /* Style for the centered navbar logo */
+.navbar-brand img {
+  height: 110px; /* You can adjust this for better fit */
+  width: auto;
+  margin-top: -5px; /* Moves logo slightly up */
+}
+
+/* Optional: Prevent nav collapse pushing logo down */
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .navbar-brand img {
+    height: 90px;
+    margin-top: -5px;
+  }
+}
+/* Logo size and position */
+.navbar-logo {
+  height: 110px;
+  margin-top: -8px;
+  margin-bottom: -4px;
+  
+}
+
+/* Optional tweaks for smaller screens */
+@media (max-width: 767.98px) {
+  .navbar-logo {
+    height: 90px;
+    margin-top: -6px;
+  }
+}
+
     </style>
 </head>
 <body class="background">
 <!-- Navbar Component -->
 <div class="container-fluid nav-bar">
-    <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-      <a href="/Idream/home" class="navbar-brand d-flex align-items-center text-center">
-        <div>
-          <img class="img-fluid" src="../../img/IDTT.jpg.png" alt="Icon" style="width: 150px; height:130px;">
-        </div>
-        <h1 class="m-0 text-primary"></h1>
-        <!-- <img class="img-fluid" src="../../img/IMG-20250110-WA0023.jpg" alt="Icon" style="width: 150px; height: 50px; margin-left: 20px;"> -->
-      </a>
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto">
-          <!-- Home Link -->
-          <a href="/Idream/home" class="nav-item nav-link" [class.active]="currentRoute === '/home'">Latest</a>
+    <nav class="navbar navbar-expand-lg navbar-light py-0 px-4">
+      <div class="d-flex justify-content-between align-items-center w-100">
   
-          <!-- Businesses Dropdown -->
-          <!-- <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" [class.active]="isBusinessesActive()" data-bs-toggle="dropdown"></a>
-            <div class="dropdown-menu rounded-0 m-0">
-              <a href="/Idream/properties" class="dropdown-item" [class.active]="currentRoute === '/properties'">Idream Properties</a>
-              <a href="/Idream/cinemas" class="dropdown-item" [class.active]="currentRoute === '/cinemas'">Idream Cinemas</a>
-              <a href="/Idream/tiruppurTamilans" class="dropdown-item" [class.active]="currentRoute === '/tiruppurTamilans'">Idream Tiruppur Thamizhans</a>
+        <!-- Left menu -->
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#leftMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="leftMenu">
+            <div class="navbar-nav">
+              <a href="/Idream/home" class="nav-item nav-link">Latest</a>
+              <a href="home/#leadership" class="nav-item nav-link">Fixtures 2025</a>
+              <a href="/Idream/jointventures" class="nav-item nav-link">Stats Hub</a>
             </div>
-          </div> -->
-  
-          <!-- Leadership Link -->
-          <a href="home/#leadership" class="nav-item nav-link" [class.active]="currentRoute === '/' && currentFragment === 'leadership'">Fixtures 2025</a>
-  
-          <!-- Joint Venture Link -->
-          <a href="/Idream/jointventures" class="nav-item nav-link" [class.active]="currentRoute === '/jointventures'">Stats Hub</a>
-  
-          <!-- Contact Us Link -->
-          <a href="home/#contact" class="nav-item nav-link" [class.active]="currentRoute === '/' && currentFragment === 'contact'">Our Tamizhans</a>
-
-          <a href="home/#contact" class="nav-item nav-link" [class.active]="currentRoute === '/' && currentFragment === 'contact'">Sponsors</a>
-
+          </div>
         </div>
+  
+        <!-- Center logo -->
+        <a href="/Idream/home" class="navbar-brand mx-3 d-flex justify-content-center align-items-center">
+          <img src="../../img/IDTT.jpg.png" alt="Icon" class="navbar-logo img-fluid" style="height: 120px; width: 142px;">
+        </a>
+  
+        <!-- Right menu -->
+        <div class="d-flex align-items-center">
+          <!-- <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#rightMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="collapse navbar-collapse" id="rightMenu">
+            <div class="navbar-nav ms-auto">
+              <a href="home/#contact" class="nav-item nav-link">Our Tamizhans</a>
+              <a href="home/#contact" class="nav-item nav-link">Sponsors</a>
+              <a href="home/#contact" class="nav-item nav-link">Contact Us</a>
+            </div>
+          </div>
+        </div>
+  
       </div>
     </nav>
   </div>
+    
+    
   
    <!-- Header Section -->
 <div class="container-fluid p-0">
