@@ -1,3 +1,84 @@
+/* navbar code */
+/* Reset base styles */
+.nav-bar {
+    background-color: #081a2d; /* Dark background for contrast */
+    padding: 0;
+    margin: 0;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+}
+
+.navbar .navbar-brand {
+    flex: 0 0 auto;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem; /* Spacing between links */
+}
+
+.navbar-nav .nav-item {
+    white-space: nowrap;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover {
+    color: #FFD700 !important; /* Golden hover effect */
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-toggler {
+    display: none; /* Hide toggle on desktop */
+}
+.nav-bar.sticky-top {
+  position: sticky;
+  padding: 0;
+  z-index: 9999;
+  background-color:  #0D0D0D;
+}
+/* Responsive behavior for mobile */
+@media (max-width: 992px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none; /* Hide collapse by default */
+    }
+
+    .navbar-collapse.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+
 .background {
   /*background-image: url('../../img/IDTT background home.png');*/
   background-repeat: no-repeat;
@@ -10,7 +91,6 @@
 .nav-bar {
   margin-top: 0px;
   position: relative;
-  padding: 0 3rem;
   transition: .5s;
   z-index: 9999;
   background-color: #081a2d;
