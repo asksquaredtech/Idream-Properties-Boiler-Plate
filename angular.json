@@ -31,7 +31,6 @@
               "src/main.ts"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/css/style.css",
               "src/lib/owlcarousel/assets/owl.carousel.min.css",
               "src/lib/owlcarousel/assets/owl.theme.default.min.css",
@@ -40,7 +39,6 @@
               "src/lib/animate/animate.min.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "/node_modules/jquery/dist/jquery.min.js",
               "src/lib/owlcarousel/owl.carousel.min.js",
               "src/lib/wow/wow.min.js",
