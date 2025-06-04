@@ -1,3 +1,4 @@
+<div class="container  results-background">
 <div class="fix-container">
   <div *ngFor="let match of matches" class="fix-card">
     
@@ -26,6 +27,7 @@
         </div>
     </div>
   </div>
+</div>
 </div>
 <!-- 
 <div id="videos" class="container-xxl py-5">
@@ -87,6 +89,39 @@
       </div>
     </div>
   </div>
+  
+  <div class="points-table-container">
+    <h2 class="text-center text-white mb-4">Points Table 2025</h2>
+    <div class="table-wrapper">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>P</th>
+            <th>W</th>
+            <th>L</th>
+            <th>Pts</th>
+            <th>NRR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of pointsTable" 
+              [ngClass]="{'highlight-row': team.team === 'IDream Tiruppur Tamizhans'}">
+            <td class="team-name-cell">
+              <img [src]="getTeamLogo(team.team)" alt="{{team.team}}" class="team-logo" />
+              {{ team.team }}
+            </td>
+            <td>{{ team.played }}</td>
+            <td>{{ team.won }}</td>
+            <td>{{ team.lost }}</td>
+            <td>{{ team.points }}</td>
+            <td>{{ team.netrr }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
   
   
    

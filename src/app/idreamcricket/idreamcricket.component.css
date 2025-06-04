@@ -199,8 +199,11 @@
   font-weight: 700;
 }
 
-.body {
-  font-family: 'Raleway', sans-serif;
+.body-title {
+  font-family: "Montserrat", sans-serif !important;
+  color:#ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .navbar-brand h1 {
@@ -249,7 +252,7 @@
   height: 90vh;
   overflow: hidden;
   background: linear-gradient(to right, #1a0033, #300060);
-  background-image: url('../../img/IDTTplayerslider2.jpg');
+  background-image: url('../../img/playerslider2otrophy.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -589,6 +592,7 @@
 /* General text */
 body {
   font-family: 'Raleway', sans-serif;
+  background-color: #010c18;
 }
 
 /* Other global styles, e.g. buttons, inputs, etc. */
@@ -684,4 +688,81 @@ body {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.video-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .video-thumbnail {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      pointer-events: none;
+    }
+  }
+
+  .card-body {
+    padding: 20px;
+
+    .card-title {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .btn-watch {
+      margin-top: 10px;
+      background-color: #e60084;
+      border: none;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #5100e6;
+      }
+    }
+  }
+}
+
+.baby-pink-border {
+  width: 100%;
+  height: 4px; /* You can adjust the thickness */
+  background-color: #ffc0cb; /* Baby pink */
+   /* Spacing above and below */
+  margin: 20px 0;
+  border-radius: 2px; /* Slight rounding */
+  box-shadow: 0 0 8px rgba(255, 192, 203, 0.6);
+
 }

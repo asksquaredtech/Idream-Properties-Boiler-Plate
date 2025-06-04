@@ -94,7 +94,16 @@ teamLogos: { [key: string]: string } = {
 getTeamLogo(teamName: string): string {
   return this.teamLogos[teamName] || 'https://via.placeholder.com/50';
 }
-
+pointsTable = [
+  { team: 'IDream Tiruppur Tamizhans', played: 5, won: 4, lost: 1, points: 8, netrr: '+0.85' },
+  { team: 'Lyca Kovai Kings', played: 5, won: 4, lost: 1, points: 8, netrr: '+0.76' },
+  { team: 'Chepauk Super Gillies', played: 5, won: 3, lost: 2, points: 6, netrr: '+0.52' },
+  { team: 'Dindigul Dragons', played: 4, won: 2, lost: 2, points: 4, netrr: '+0.31' },
+  { team: 'SKM Salem Spartans', played: 4, won: 2, lost: 2, points: 4, netrr: '-0.21' },
+  { team: 'Trichy Grand Cholas', played: 4, won: 1, lost: 3, points: 2, netrr: '-0.47' },
+  { team: 'Siechem Madurai Panthers', played: 4, won: 1, lost: 3, points: 2, netrr: '-0.66' },
+  { team: 'Nellai Royal Kings', played: 4, won: 1, lost: 3, points: 2, netrr: '-0.92' }
+];
   fixtures = [
     {
       date: '06 JUN 2025',
