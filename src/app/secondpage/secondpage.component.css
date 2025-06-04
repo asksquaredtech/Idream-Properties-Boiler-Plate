@@ -242,3 +242,178 @@ body {
   }
 }
 
+.fixture-list {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  background-image: url('../../img/IDTT fixtures background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-content: flex-end;
+}
+
+.match-card {
+  display: flex;
+  flex-direction: row;
+  width: 55%;
+  max-width: 900px;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px #ff5ca8;
+}
+
+.team-box {
+  background-color: #450be4;
+  padding: 16px;
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.team-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  color: white;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.team-name {
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.versus {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.details-box {
+  background-color: #ff007f;
+  color: white;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 12px;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.datetime h1 {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.datetime h2 {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.venue {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: auto;
+  word-break: break-word;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .match-card {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .team-box {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+  }
+
+  .team-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .versus {
+    font-size: 18px;
+    margin: 6px 0;
+  }
+
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .team-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .details-box {
+    text-align: center;
+    align-items: center;
+    padding: 16px 12px;
+    width: 100%;
+  }
+
+  .datetime h1 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .datetime h2 {
+    font-size: 18px;
+  }
+
+  .venue {
+    font-size: 12px;
+    text-align: center;
+    padding: 0 8px;
+  }
+}
+
+.fix-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+/*  */

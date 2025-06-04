@@ -15,6 +15,15 @@ export class SecondpageComponent {
   // matches: any[] = [];
   private apiUrl = 'https://cricbuzz-cricket2.p.rapidapi.com/teams/v1/861/results';
   //private apiUrl = '';
+  IDTTmatches = [
+    { date: '6 JUNE', time: '7:15 PM', team1: 'IDTT', team2: 'CSG', venue: 'COIMBATORE' },
+    { date: '8 JUNE', time: '7:15 PM', team1: 'IDTT', team2: 'DD', venue: 'COIMBATORE' },
+    { date: '13 JUNE', time: '7:15 PM', team1: 'IDTT', team2: 'SKM SS', venue: 'SALEM' },
+    { date: '15 JUNE', time: '3:15 PM', team1: 'TGC', team2: 'IDTT', venue: 'SALEM' },
+    { date: '22 JUNE', time: '7:15 PM', team1: 'SMP', team2: 'IDTT', venue: 'TIRUNELVELI' },
+    { date: '24 JUNE', time: '7:15 PM', team1: 'LKK', team2: 'IDTT', venue: 'TIRUNELVELI' },
+    { date: '29 JUNE', time: '3:15 PM', team1: 'IDTT', team2: 'NRK', venue: 'DINDIGUL' },
+  ];
   matches : any[] = [
     {
       team1Name: 'IDream Tiruppur Tamizhans',
@@ -90,7 +99,7 @@ getTeamLogo(teamName: string): string {
     {
       date: '06 JUN 2025',
       time: '19:15',
-      venue: 'Sri Ramakrishna College of Arts and Science Cricket Ground, Coimbatore',
+      venue: 'Sri Ramakrishna College Cricket Ground, Coimbatore',
       team1: {
         name: 'IDream Tiruppur Tamizhans',
         logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
@@ -103,7 +112,7 @@ getTeamLogo(teamName: string): string {
     {
       date: '08 JUN 2025',
       time: '19:15',
-      venue: 'Sri Ramakrishna College of Arts and Science Cricket Ground, Coimbatore',
+      venue: 'Sri Ramakrishna College Cricket Ground, Coimbatore',
       team1: {
         name: 'IDream Tiruppur Tamizhans',
         logo: 'https://lh3.googleusercontent.com/d/1z2uRjAwFp7s2pxBwMRcC6RQVf8E09KCS?authuser=0'
@@ -144,7 +153,7 @@ getTeamLogo(teamName: string): string {
       time: '19:15',
       venue: 'Chennai Super Kings Ground, Sankar Nagar, Tirunelveli',
       team1: {
-        name: 'Siechem Madurai Panthers',
+        name: 'S Madurai Panthers',
         logo: 'https://tnplmcfeeds.s3.ap-south-1.amazonaws.com/teamlogos/SMP.png'
       },
       team2: {

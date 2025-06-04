@@ -1,10 +1,54 @@
 /* navbar code */
 /* Reset base styles */
 .nav-bar {
-    background-color: #081a2d; /* Dark background for contrast */
-    padding: 0;
-    margin: 0;
+  background-color: #010c18;
+   /* Dark background for contrast */
+  padding: 0;
+  margin: 0;
+}
+/* Base styles for the navigation bar */
+.nav-bar {
+  margin-top: 0px;
+  position: relative;
+  transition: .5s;
+  z-index: 999;
+}
+.fitpage{
+  Height: 90vh !important;
+}
+.nav-bar.sticky-top {
+  position: sticky;
+  padding: 0;
+  z-index: 9999;
+  background-color: #081a2d;
+}
 
+/* Social Bar Styling */
+.social-bar {
+  background-color: #010c18;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.social-bar.hidden {
+  top: -50px; /* Slide up to hide */
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.navbar {
+  margin-top: 50px; /* Adjust for the social bar */
 }
 
 .navbar {
@@ -45,12 +89,6 @@
 .navbar-toggler {
     display: none; /* Hide toggle on desktop */
 }
-.nav-bar.sticky-top {
-  position: sticky;
-  padding: 0;
-  z-index: 9999;
-  background-color:  #0D0D0D;
-}
 /* Responsive behavior for mobile */
 @media (max-width: 992px) {
     .navbar {
@@ -87,14 +125,6 @@
   background-attachment: fixed; /* Optional: for parallax-like effect */
 }
 
-/* Base styles for the navigation bar */
-.nav-bar {
-  margin-top: 0px;
-  position: relative;
-  transition: .5s;
-  z-index: 9999;
-  background-color: #081a2d;
-}
 
 /* Responsive padding on navbar */
 @media (max-width: 991.98px) {
@@ -654,32 +684,4 @@ body {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-}
-
-/* Social Bar Styling */
-.social-bar {
-  background-color: #0a1e2e;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  transition: top 0.3s;
-}
-
-.social-bar.hidden {
-  top: -50px; /* Slide up to hide */
-}
-
-.social-icons a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-.navbar {
-  margin-top: 50px; /* Adjust for the social bar */
 }
