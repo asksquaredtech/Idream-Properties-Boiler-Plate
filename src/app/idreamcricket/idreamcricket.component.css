@@ -241,8 +241,9 @@
 /* Background Styles */
 .bg-dark {
   --bs-bg-opacity: 1;
-  background: #002CB0;
-  background: radial-gradient(circle, rgba(0, 44, 176, 1) 37%, rgba(126, 22, 149, 1) 67%, rgba(255, 0, 121, 1) 93%);
+  background: #081a2d!important;
+  /* background: #002CB0;
+  background: radial-gradient(circle, rgba(0, 44, 176, 1) 37%, rgba(126, 22, 149, 1) 67%, rgba(255, 0, 121, 1) 93%); */
 }
 
 /* Player Slider */
