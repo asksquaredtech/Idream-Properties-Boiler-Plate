@@ -767,3 +767,27 @@ body {
   box-shadow: 0 0 8px rgba(255, 192, 203, 0.6);
 
 }
+
+
+.text-center.rounded.p-4 {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.text-center.rounded.p-4 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.white-bg {
+  background-color: white;
+  padding: 1rem; /* Add some padding if needed */
+  border-radius: 8px; /* Slight rounding, adjust as needed */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+}
