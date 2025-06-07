@@ -44,10 +44,17 @@
             <div class="row g-0 gx-5 align-items-end">
                 <div class="col-lg-6">
                     <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                        <h1 class="mb-3">Property Listing</h1>
-                        <p>Discover the perfect property for you! Browse through our curated list of the finest properties for sale or rent.</p>
+                        <h1 style="line-height: 1.2;">Our Projects</h1>
+                        <p class="tagline">WHERE DREAMS FIND THEIR PLOT!</p>
+                        
                     </div>
                 </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">In Progress</button>
+                    <button class="filter-btn">Completed</button>
+                  </div>
+                  
                 <!-- CODE COMMENTED FOR NOW!! NEED TO MODIFY AND ADD -->
                 <!-- <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
@@ -70,15 +77,16 @@
                     <div class="row g-4">
                         <!-- Property Card -->
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="property-item rounded overflow-hidden shadow-lg transition-all hover:scale-105">
+                            <div class="property-item rounded overflow-hidden shadow-lg transition-all hover:scale-105 completed">
+
                                 <div class="position-relative overflow-hidden">
                                     <a href="/Idream/vistara" class = "nav-link"><img class="img-fluid" src="https://lh3.googleusercontent.com/d/1fg7omGN0IqTPT_XsrN8jPbHvQq3WLfMp?authuser=0" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">IN-PROGRESS</div>
+                                   
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">PLOT</div>
                                 </div>
                                 <div class="p-4 pb-0 position-relative">
                                     <h5 class="text-primary mb-3">₹2,847 / Sq.Ft</h5>
-                                    <a class="d-block h5 mb-2" href="#">Idream Vistara</a>
+                                    <a class="d-block h5 mb-2" href="#">idream Vistara</a>
                                     <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Uthangudi, Madurai</p>
                                     <a class="btn btn-secondary brochure-btn" href="https://drive.google.com/file/d/1O7gcOXfsjMrZxxEe65UG3Z7AJod6gkNJ/view?usp=drive_link" target="_blank">Brochure</a>
                                 </div>
@@ -95,12 +103,11 @@
                             <div class="property-item rounded overflow-hidden shadow-lg transition-all hover:scale-105">
                                 <div class="position-relative overflow-hidden">
                                     <a href="#"><img class="img-fluid" src="../../img/IdreamNakshatra.jpg" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">COMPLETED</div>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">PLOT</div>
                                 </div>
                                 <div class="p-4 pb-0 position-relative">
                                     <h5 class="text-primary mb-3">₹2,400 / Sq.Ft</h5>
-                                    <a class="d-block h5 mb-2" href="#">Idream Nakshatra</a>
+                                    <a class="d-block h5 mb-2" href="#">idream Nakshatra</a>
                                     <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Royapuram, Chennai</p>
                                     <a class="btn btn-secondary brochure-btn" href="https://drive.google.com/file/d/1XhQfXcmdBg_Fv9H8Yg3G1AKMfOg_lzPp/view?usp=drive_link" target="_blank">Brochure</a>
                                 </div>
@@ -116,12 +123,11 @@
                             <div class="property-item rounded overflow-hidden shadow-lg transition-all hover:scale-105">
                                 <div class="position-relative overflow-hidden">
                                     <a href="#"><img class="img-fluid" src="https://lh3.googleusercontent.com/d/11Y1_c6Ubu7zkBstbiBhafS4alxvmf2gc?authuser=0" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">COMPLETED</div>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">PLOT</div>
                                 </div>
                                 <div class="p-4 pb-0 position-relative">
                                     <h5 class="text-primary mb-3">₹970 / Sq.Ft</h5>
-                                    <a class="d-block h5 mb-2" href="#">Idream Mandhra</a>
+                                    <a class="d-block h5 mb-2" href="#">idream Mandhra</a>
                                     <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tondiarpet, Chennai</p>
                                     <a class="btn btn-secondary brochure-btn" href="https://drive.google.com/file/d/1A0UkfF9Vc3CjHkDBuGQYwuPzdabN5wT4/view?usp=drive_link" target="_blank">Brochure</a>
                                 </div>
@@ -328,4 +334,26 @@
         </div>
     </div>
     <!--FAQ-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const filterButtons = document.querySelectorAll('.filter-btn');
+          const projects = document.querySelectorAll('.project-card');
+        
+          filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              filterButtons.forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              const filter = btn.textContent.trim().toLowerCase().replace(' ', '');
+              projects.forEach(project => {
+                if (filter === 'all' || project.classList.contains(filter)) {
+                  project.style.display = 'block';
+                } else {
+                  project.style.display = 'none';
+                }
+              });
+            });
+          });
+        });
+        </script>
+        
     </div>
