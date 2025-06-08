@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, map , of } from 'rxjs';
+import { tap, shareReplay } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -13,6 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class SecondpageComponent {
   // matches: any[] = [];
+  private pointsapiUrl = 'https://cricbuzz-cricket2.p.rapidapi.com/stats/v1/series/9866/points-table';
+  private localStorageKey = 'points_table_cache';
+  private cacheExpiry = 5 * 60 * 1000; // 5 minutes
+  private cachedResponse$: Observable<any> | null = null;
+
   private apiUrl = 'https://cricbuzz-cricket2.p.rapidapi.com/teams/v1/861/results';
   //private apiUrl = '';
   IDTTmatches = [
@@ -69,11 +75,25 @@ export class SecondpageComponent {
     'Accept': 'application/json'
   });
 
+  private cacheTime: number = 24 * 60 * 60 * 1000; //  private cacheExpiry = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+
+  private lastFetchTime = 0;
   constructor(private http: HttpClient) {}
   
   ngOnInit(): void {
     this.getLatestMatches().subscribe((data) => {
       this.matches = data;
+    });
+    this.getPointsTable().subscribe((data) => {
+      this.pointsTable = data.pointsTable[0].pointsTableInfo.map((team: { teamFullName: string; matchesPlayed: number; matchesWon: number; points: any; nrr: any; }) => ({
+        team: team.teamFullName,
+        played: team.matchesPlayed,
+        won: (team.matchesWon == undefined) ? 0 : team.matchesWon,
+        lost: team.matchesPlayed - ((team.matchesWon == undefined) ? 0 : team.matchesWon),
+        points: (team.points == undefined) ? 0 : team.points,
+        netrr: team.nrr,
+        logo: this.getTeamLogo(team.teamFullName)
+      }));
     });
   }
 
@@ -198,6 +218,16 @@ pointsTable = [
     }
   ];
 
+  getPointsTable(): Observable<any> {
+    const now = Date.now();
+    if (!this.cachedResponse$ || now - this.lastFetchTime > this.cacheTime) {
+      this.lastFetchTime = now;
+      this.cachedResponse$ = this.http.get(this.pointsapiUrl, { headers: this.headers }).pipe(
+        shareReplay(1)
+      );
+    }
+    return this.cachedResponse$;
+  }
   public getLatestMatches(): Observable<any[]> {
     return this.http.get<any>(this.apiUrl, { headers: this.headers }).pipe(
       map((response) => {

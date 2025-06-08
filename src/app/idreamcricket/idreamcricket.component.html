@@ -66,10 +66,11 @@
 <!-- Social Media Bar -->
 <div class="social-bar">
     <div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com/iDreamTiruppurTamizhans/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/idream_tiruppur_tamizhans/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://g.co/kgs/uvRZL24" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/teamtiruppur?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/idream_tiruppur_tamizhans/?hl=en" target="_blank">| FAN CENTER <i class="fab fa-foursquare"></i></a>
     </div>
   </div>
 <!-- Navbar Component -->
@@ -84,15 +85,15 @@
           </button>
           <div class="collapse navbar-collapse" id="leftMenu">
             <div class="navbar-nav">
-              <a href="/Idream/home" class="nav-item nav-link">Latest</a>
-              <a href="home/#leadership" class="nav-item nav-link">Fixtures 2025</a>
-              <a href="/Idream/jointventures" class="nav-item nav-link">Stats Hub</a>
+              <a [routerLink]="[]" fragment="Latest" target="_parent" class="nav-item nav-link">Latest</a>
+              <a [routerLink]="[]" fragment="Fixtures" target="_parent" class="nav-item nav-link">Fixtures 2025</a>
+              <a [routerLink]="[]" fragment="Stats" target="_parent" class="nav-item nav-link">Stats Hub</a>
             </div>
           </div>
         </div>
   
         <!-- Center logo -->
-        <a href="/Idream/home" class="navbar-brand mx-3 d-flex justify-content-center align-items-center">
+        <a [routerLink]="[]" fragment="Home" target="_parent"  class="navbar-brand mx-3 d-flex justify-content-center align-items-center">
           <img src="../../img/IDTT.jpg.png" alt="Icon" class="navbar-logo img-fluid" style="height: 160px; width: 182px;">
         </a>
   
@@ -103,9 +104,9 @@
           </button> -->
           <div class="collapse navbar-collapse" id="rightMenu">
             <div class="navbar-nav ms-auto">
-              <a href="home/#contact" class="nav-item nav-link">Our Tamizhans</a>
-              <a href="home/#contact" class="nav-item nav-link">Sponsors</a>
-              <a href="home/#contact" class="nav-item nav-link">Contact Us</a>
+              <a [routerLink]="[]" fragment="OurTamizhans" target="_parent"  class="nav-item nav-link">Our Tamizhans</a>
+              <a [routerLink]="[]" fragment="Sponsors" target="_parent"  class="nav-item nav-link">Sponsors</a>
+              <a [routerLink]="[]" fragment="Latest" target="_parent"  class="nav-item nav-link">Contact Us</a>
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@
     
   
    <!-- Header Section -->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0" id="Home">
     <div class="row g-0">
         <!-- Full-Width Image -->
         <div class="col-12">
@@ -127,7 +128,7 @@
 </div>
 
 <!-- Videos Section -->
-<div id="videos" class="container-xxl py-5">
+<div id="videos" class="container-xxl py-5" id="Latest">
     <div class="container">
       <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
         <!-- Horizontal Baby Pink Border -->
@@ -243,7 +244,7 @@
     </div>
     <div class="player-slider">
         <div class="player-slide active">
-          <div class="slide-content">
+          <div class="slide-content"  id="OurTamizhans">
             <div class="player-image">
               <img [src]="currentPlayer.imageUrl" [alt]="currentPlayer.name + ' ' + currentPlayer.surname" />
             </div>
@@ -279,7 +280,7 @@
       </div>
       
 <!-- Our Sponsors Section -->
-<div id="sponsors" class="container-xxl py-5">
+<div id="sponsors" class="container-xxl py-5" id="Sponsors">
   <div class="container">
       <!-- Title -->
       <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">

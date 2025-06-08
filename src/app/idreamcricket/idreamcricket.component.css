@@ -36,6 +36,13 @@
   transition: top 0.3s;
 }
 
+.social-bar :hover {
+  color: rgb(255, 0, 191);
+  text-align: center;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
 .social-bar.hidden {
   top: -50px; /* Slide up to hide */
 }
@@ -78,7 +85,7 @@
 }
 
 .navbar-nav .nav-item:hover {
-    color: #FFD700 !important; /* Golden hover effect */
+    color: #e61d25 !important; /* Golden hover effect */
 }
 
 .navbar-collapse {
