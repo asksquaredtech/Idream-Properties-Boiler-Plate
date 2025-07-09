@@ -21,6 +21,8 @@
   padding: 0;
   z-index: 9999;
   background-color: #081a2d;
+  padding-left: 1.5rem;
+  justify-content: space-between !important;
 }
 
 /* Social Bar Styling */
@@ -100,8 +102,11 @@
 @media (max-width: 992px) {
     .navbar {
         flex-wrap: wrap;
+        padding-left:0px !important;
     }
-
+    .justify-content-between {
+      justify-content: start !important;
+    }
     .navbar-toggler {
         display: block;
     }
@@ -110,10 +115,8 @@
         display: none; /* Hide collapse by default */
     }
 
-    .navbar-collapse.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    .hidden-mob {
+        display: none;
     }
 
     .navbar-nav {
