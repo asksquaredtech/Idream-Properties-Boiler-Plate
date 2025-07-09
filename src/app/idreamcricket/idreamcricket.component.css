@@ -901,3 +901,47 @@ body {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    #accolades {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    
+    #accolades h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: rgb(255, 0, 191);
+    }
+    
+    .accolade-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px !important;
+      margin: 0 auto;
+    }
+    
+    .accolade-card {
+      flex: 1 1 250px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .accolade-card:hover {
+      transform: scale(1.05);
+    }
+    
+    .accolade-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    
+    .accolade-card p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    
