@@ -275,3 +275,62 @@
     }
   }
   
+  .catchy-tagline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff6600; /* a deeper, more noticeable orange */
+ /* Changed from #007bff (blue) to orange */
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.catchy-tagline{
+    text-align: left;
+    margin-left: 10px;  /* Adjust as needed for spacing */
+  }
+  
+
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: flex-start;
+    padding-left: 20px;  /* optional spacing */
+  }
+  
+  .filter-btn {
+    background-color: #fff;
+    border: 1px solid #ff6600;
+    color: #f36d20;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background-color: #ff6600;
+    color: #fff;
+  }
+  
+
+  /* styles.css */
+
+h1 {
+    font-size: 2rem;           /* Adjust as needed */
+    color: #003366;            /* Dark blue for the title */
+    line-height: 1.2;          /* Controls the spacing below the title */
+    margin-bottom: 0;          /* Remove default bottom margin */
+  }
+  
+  p.tagline {
+    font-size: 1.2rem;         /* Adjust as needed */
+    color: #ff6600;            /* Orange for the tagline */
+    font-weight: bold;         /* Makes the tagline stand out */
+    line-height: 1.5;          /* Adds vertical spacing within and below the tagline */
+    margin-top: 0;             /* Remove top margin to rely on line-height */
+  }
+  

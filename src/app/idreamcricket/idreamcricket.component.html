@@ -66,10 +66,11 @@
 <!-- Social Media Bar -->
 <div class="social-bar">
     <div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com/iDreamTiruppurTamizhans/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/idream_tiruppur_tamizhans/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://g.co/kgs/uvRZL24" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/teamtiruppur?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/idream_tiruppur_tamizhans/?hl=en" target="_blank" class="hidden-mob">| FAN CENTER <i class="fab fa-foursquare"></i></a>
     </div>
   </div>
 <!-- Navbar Component -->
@@ -84,15 +85,15 @@
           </button>
           <div class="collapse navbar-collapse" id="leftMenu">
             <div class="navbar-nav">
-              <a href="/Idream/home" class="nav-item nav-link">Latest</a>
-              <a href="home/#leadership" class="nav-item nav-link">Fixtures 2025</a>
-              <a href="/Idream/jointventures" class="nav-item nav-link">Stats Hub</a>
+              <a [routerLink]="[]" fragment="Latest" target="_parent" class="nav-item nav-link">Latest</a>
+              <a [routerLink]="[]" fragment="Fixtures" target="_parent" class="nav-item nav-link">Fixtures 2025</a>
+              <a [routerLink]="[]" fragment="Stats" target="_parent" class="nav-item nav-link">Stats Hub</a>
             </div>
           </div>
         </div>
   
         <!-- Center logo -->
-        <a href="/Idream/home" class="navbar-brand mx-3 d-flex justify-content-center align-items-center">
+        <a [routerLink]="[]" fragment="Home" target="_parent"  class="navbar-brand mx-3 d-flex justify-content-center align-items-center">
           <img src="../../img/IDTT.jpg.png" alt="Icon" class="navbar-logo img-fluid" style="height: 160px; width: 182px;">
         </a>
   
@@ -103,9 +104,9 @@
           </button> -->
           <div class="collapse navbar-collapse" id="rightMenu">
             <div class="navbar-nav ms-auto">
-              <a href="home/#contact" class="nav-item nav-link">Our Tamizhans</a>
-              <a href="home/#contact" class="nav-item nav-link">Sponsors</a>
-              <a href="home/#contact" class="nav-item nav-link">Contact Us</a>
+              <a [routerLink]="[]" fragment="OurTamizhans" target="_parent"  class="nav-item nav-link">Our Tamizhans</a>
+              <a [routerLink]="[]" fragment="Sponsors" target="_parent"  class="nav-item nav-link">Sponsors</a>
+              <a [routerLink]="[]" fragment="Latest" target="_parent"  class="nav-item nav-link">Contact Us</a>
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@
     
   
    <!-- Header Section -->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0" id="Home">
     <div class="row g-0">
         <!-- Full-Width Image -->
         <div class="col-12">
@@ -126,73 +127,77 @@
     </div>
 </div>
 
-    <!-- Videos Section -->
-<div id="videos" class="container-xxl py-5">
+<!-- Videos Section -->
+<div id="videos" class="container-xxl py-5" id="Latest">
     <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">Latest News and Videos</h1>
-            <p>Watch the latest highlights and player features from IDream Tiruppur Tamilans team.</p>
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+        <!-- Horizontal Baby Pink Border -->
+        <div class="baby-pink-border"></div>
+        <h1 class="mb-3 body-title">TOP STORIES</h1>
+        <div class="baby-pink-border"></div>
+      </div>
+      <div class="row g-4">
+        <!-- Video Card 1 -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card video-card">
+            <div class="video-thumbnail">
+              <img src="https://lh3.googleusercontent.com/d/1YoU9n6otFxRRKUgnkxXRyf7E4vUfOi1s?authuser=0" class="card-img-top" alt="IDTT VS NRK 2024">
+              <div class="play-icon">▶</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">IDTT VS NRK 2024</h5>
+              <p class="card-text">Don’t Miss the Action: TNPL 2024 Highlights Inside!</p>
+              <a href="https://www.youtube.com/watch?v=i9k90ebYE5Y&list=PLn62WbS50OUVDou3uhb8lGwX0x3cs0dXy&index=1" class="btn btn-watch" target="_blank">Watch Now</a>
+            </div>
+          </div>
         </div>
-        <div class="row g-4">
-            <!-- Video Card 1 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="card">
-                    <img src="https://lh3.googleusercontent.com/d/1YoU9n6otFxRRKUgnkxXRyf7E4vUfOi1s?authuser=0" class="card-img-top" alt="IDTT VS NRK 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">IDTT VS NRK 2024</h5>
-                        <p class="card-text">Don’t Miss the Action: TNPL 2024 Highlights Inside!</p>
-                        <a href="https://www.youtube.com/watch?v=i9k90ebYE5Y&list=PLn62WbS50OUVDou3uhb8lGwX0x3cs0dXy&index=1" class="btn btn-primary" target="_blank">Watch Now</a>
-                    </div>
-                </div>
+  
+        <!-- Video Card 2 -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="card video-card">
+            <div class="video-thumbnail">
+              <img src="https://lh3.googleusercontent.com/d/1KQd_IMzoGZERaSemkyXnOnIzOokJNELx?authuser=0" class="card-img-top" alt="IDTT VS SKM 2024">
+              <div class="play-icon">▶</div>
             </div>
-            <!-- Video Card 2 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="card">
-                    <img src="https://lh3.googleusercontent.com/d/1KQd_IMzoGZERaSemkyXnOnIzOokJNELx?authuser=0" class="card-img-top" alt="IDTT VS SKM 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">IDTT VS SKM 2024</h5>
-                        <p class="card-text">Highlights: TNPL’s Wildest Match!</p>
-                        <a href="https://www.youtube.com/watch?v=-vBmJYa3YR0&list=PLn62WbS50OUVDou3uhb8lGwX0x3cs0dXy&index=4" class="btn btn-primary" target="_blank">Watch Now</a>
-                    </div>
-                </div>
+            <div class="card-body">
+              <h5 class="card-title">IDTT VS SKM 2024</h5>
+              <p class="card-text">Highlights: TNPL’s Wildest Match!</p>
+              <a href="https://www.youtube.com/watch?v=-vBmJYa3YR0&list=PLn62WbS50OUVDou3uhb8lGwX0x3cs0dXy&index=4" class="btn btn-watch" target="_blank">Watch Now</a>
             </div>
-            <!-- Video Card 3 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="card">
-                    <img src="https://lh3.googleusercontent.com/d/13MQ8t-g5ShUP6ncaKEKJK0CVU5aX1lvN?authuser=0" class="card-img-top" alt="IDTT VS SMP 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">IDTT VS SMP 2024</h5>
-                        <p class="card-text">TNPL 2024 Classic: Rewatch the Game That Had It All</p>
-                        <a href="https://www.youtube.com/watch?v=BGcFlEJvlMY&list=PLn62WbS50OUVDou3uhb8lGwX0x3cs0dXy&index=13" class="btn btn-primary" target="_blank">Watch Now</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+  
+        <!-- Video Card 3 -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="card video-card">
+            <div class="video-thumbnail">
+              <img src="https://lh3.googleusercontent.com/d/13MQ8t-g5ShUP6ncaKEKJK0CVU5aX1lvN?authuser=0" class="card-img-top" alt="IDTT VS SMP 2024">
+              <div class="play-icon">▶</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">IDTT VS SMP 2024</h5>
+              <p class="card-text">TNPL 2024 Classic: Rewatch the Game That Had It All</p>
+              <a href="https://www.youtube.com/watch?v=BGcFlEJvlMY&list=PLn62WbS50OUVDou3uhb8lGwX0x3cs0dXy&index=13" class="btn btn-watch" target="_blank">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
 
   <!-- Results section -->
   <div id="videos" class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">IDTT Latest Results</h1>
+            <div class="baby-pink-border"></div>
+            <h1 class="mb-3 body-title">LATEST RESULTS</h1>
+            <div class="baby-pink-border"></div>
             <p></p>
         </div>
         <app-secondpage></app-secondpage>
     </div>
 </div>
-
-<div class="team-layout">
-    <div class="jersey-panel">
-      <img src="https://lh3.googleusercontent.com/d/1vspNaBgfS0nRYqs7KfGpL19tq5E0CcrY?authuser=0" alt="Team Jersey" />
-    </div>
-  
-    <div class="fixtures-panel">
-        <img src="https://lh3.googleusercontent.com/d/17CVgdeykUGaHhRUBg2HpgqtG2NKvBV-d?authuser=0" alt="Fixtures" />
-      </div>
-    </div>
-    
-
 
     <!-- Stats Section -->
     <!-- <div id="stats" class="container-xxl py-5">
@@ -231,14 +236,19 @@
             </div>
         </div>
     </div> -->
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+        <div class="baby-pink-border"></div>
+        <h1 class="mb-3 body-title">OUR TAMIZHANS</h1>
+        <div class="baby-pink-border"></div>
+        <p></p>
+    </div>
     <div class="player-slider">
         <div class="player-slide active">
-          <div class="slide-content">
+          <div class="slide-content"  id="OurTamizhans">
             <div class="player-image">
               <img [src]="currentPlayer.imageUrl" [alt]="currentPlayer.name + ' ' + currentPlayer.surname" />
             </div>
             <div class="player-info">
-              <h2 class="player-name title">Our Tamizhans - <span>2025</span></h2>
               <h2 class="player-name">{{ currentPlayer.name }} <span>{{ currentPlayer.surname }}</span></h2>
               <div class="player-role">
                 <span *ngFor="let r of currentPlayer.role; let last = last">
@@ -269,45 +279,100 @@
         </div>
       </div>
       
+<!-- Our Sponsors Section -->
+<div id="sponsors" class="container-xxl py-5" id="Sponsors">
+  <div class="container">
+      <!-- Title -->
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+          <div class="baby-pink-border"></div>
+          <h1 class="mb-3 body-title">Our Sponsors</h1>
+          <div class="baby-pink-border"></div>
+      </div>
 
-    <!-- Our Sponsors Section -->
-    <div id="sponsors" class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">Our Sponsors</h1>
-                <p>We are grateful to our sponsors for their support.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-light text-center rounded p-4">
-                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 1">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-light text-center rounded p-4">
-                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 2">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light text-center rounded p-4">
-                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 3">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="bg-light text-center rounded p-4">
-                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 4">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="bg-light text-center rounded p-4">
-                        <img class="img-fluid" src="https://via.placeholder.com/150x100" alt="Sponsor 5">
-                    </div>
-                </div>
-            </div>
+      <!-- Main Sponsors Grid -->
+      <div class="row g-4 mb-5 justify-content-center">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="text-center rounded p-4">
+            <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1NRPVaQxgMbhuXdMI1PKo94rG0EMjOq1r?authuser=0" alt="Sponsor 1">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Banking Partner Section -->
+<div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+    <div class="baby-pink-border"></div>
+    <h2 class="mb-3 body-title">Banking Partner</h2>
+    <div class="baby-pink-border"></div>
+</div>
+<div class="row g-4 mb-5 justify-content-center">
+    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="text-center rounded p-4">
+            <img class="img-fluid" src="https://lh3.googleusercontent.com/d/10Pgkv4Ca1GUXxGPvZFA4nZL1JDtv6Kiq?authuser=0" alt="Banking Partner">
         </div>
     </div>
+</div>
+
+
+     <!-- Commercial Partner Section -->
+<div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+  <div class="baby-pink-border"></div>
+  <h2 class="mb-3 body-title">Commercial Partner</h2>
+  <div class="baby-pink-border"></div>
+</div>
+<div class="row g-4 mb-5 justify-content-center">
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="text-center rounded p-4">
+          <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1ghhS1RovlbWXwvNu57Y_qNWloknU6gdv?authuser=0" alt="Commercial Partner">
+      </div>
+  </div>
+</div>
+
+
+      <!-- Associate Sponsors Section -->
+<div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+  <div class="baby-pink-border"></div>
+  <h2 class="mb-3 body-title">Associate Sponsors</h2>
+  <div class="baby-pink-border"></div>
+</div>
+<div class="row g-4 justify-content-center">
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="text-center rounded p-4">
+          <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1zLiDpMlvoqkUEPhpFV8Z8zzPVH4luPZm?authuser=0" alt="Associate Sponsor 1">
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="text-center rounded p-4">
+          <img class="img-fluid" src="https://lh3.googleusercontent.com/d/13bDooFNOZU5w3aPnh2uyAa2-O3bPLEcH?authuser=0" alt="Associate Sponsor 2">
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="text-center rounded p-4">
+          <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1V3lnEtmrJzYZYrC89Bs7a6tbSZDocrTB?authuser=0" alt="Associate Sponsor 3">
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="text-center rounded p-4 white-bg">
+      <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1VYFX5iaYR9N2Qiorkob6hTCADY1gGpO4?authuser=0" alt="Associate Sponsor 4">
+    </div>
+  </div>
+  
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="text-center rounded p-4">
+          <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1vr6vtyGh_5uoGBBAAvzun6KmCnLjRWZj?authuser=0" alt="Associate Sponsor 5">
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="text-center rounded p-4">
+          <img class="img-fluid" src="https://lh3.googleusercontent.com/d/1oNwUvI7bpaKikWWExcmbFZznJIN3rijB?authuser=0" alt="Associate Sponsor 6">
+      </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
     <!--Contact-->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="bg-light rounded p-3">
                 <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
@@ -321,7 +386,6 @@
                                 <p>Fill the below form with your details!</p>
                             </div>
     
-                            <!-- Contact Form -->
                             <form id="contactForm">
                                 <input type="hidden" name="access_key" value="b2e78127-5e51-4689-913c-ea09b78f3c31">
     
@@ -348,7 +412,6 @@
                                 <button type="submit" id="submitBtn" class="btn btn-primary py-3 px-4 mt-3">Submit Form</button>
                             </form>
     
-                            <!-- Success Message Pop-Up -->
                             <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
                                 Thank you for contacting us! We will get back to you shortly.
                             </div>
@@ -357,7 +420,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    
     <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -382,36 +447,7 @@
                     <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
                     <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Photo Gallery</h5>
-                    <div class="row g-2 pt-2 gallery align-items-center">
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="https://lh3.googleusercontent.com/d/1LgjhCDYvnHsrGCeEXCvK6kjDF8PkefXm?authuser=0" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="https://lh3.googleusercontent.com/d/1MmWnHHZutMg3nFOT09XG15F6uZJrvb7M?authuser=0" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="https://lh3.googleusercontent.com/d/1leLjYYqTm-VS02aXWUf_K2NNUhjwCrn2?authuser=0" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="https://lh3.googleusercontent.com/d/1fg7omGN0IqTPT_XsrN8jPbHvQq3WLfMp?authuser=0" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="https://lh3.googleusercontent.com/d/1ebdtoHKUMGQcQqjF6cqZLu0nqjS7pTS6?authuser=0" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="https://lh3.googleusercontent.com/d/16ALWyRDNkpnrM8FLs1OzG_qI8KTLMbng?authuser=0" alt="">
-                        </div>
-                    </div>
-                </div> -->
                 <div class="col-lg-3 col-md-6">
-                    <!-- <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div> -->
                     <img class="img-fluid" src="../../img/IDTT.jpg.png" alt="Icon" style="width: 180px; height: 150px;">
                 </div>
             </div>

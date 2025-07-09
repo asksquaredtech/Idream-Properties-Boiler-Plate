@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, map , of } from 'rxjs';
+import { tap, shareReplay } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -13,6 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class SecondpageComponent {
   // matches: any[] = [];
+  private pointsapiUrl = 'https://cricbuzz-cricket2.p.rapidapi.com/stats/v1/series/9866/points-table';
+  private localStorageKey = 'points_table_cache';
+  private cacheExpiry = 5 * 60 * 1000; // 5 minutes
+  private cachedResponse$: Observable<any> | null = null;
+
   private apiUrl = 'https://cricbuzz-cricket2.p.rapidapi.com/teams/v1/861/results';
   //private apiUrl = '';
   IDTTmatches = [
@@ -69,11 +75,25 @@ export class SecondpageComponent {
     'Accept': 'application/json'
   });
 
+  private cacheTime: number = 24 * 60 * 60 * 1000; //  private cacheExpiry = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+
+  private lastFetchTime = 0;
   constructor(private http: HttpClient) {}
   
   ngOnInit(): void {
     this.getLatestMatches().subscribe((data) => {
       this.matches = data;
+    });
+    this.getPointsTable().subscribe((data) => {
+      this.pointsTable = data.pointsTable[0].pointsTableInfo.map((team: { teamFullName: string; matchesPlayed: number; matchesWon: number; points: any; nrr: any; }) => ({
+        team: team.teamFullName,
+        played: team.matchesPlayed,
+        won: (team.matchesWon == undefined) ? 0 : team.matchesWon,
+        lost: team.matchesPlayed - ((team.matchesWon == undefined) ? 0 : team.matchesWon),
+        points: (team.points == undefined) ? 0 : team.points,
+        netrr: team.nrr,
+        logo: this.getTeamLogo(team.teamFullName)
+      }));
     });
   }
 
@@ -94,7 +114,16 @@ teamLogos: { [key: string]: string } = {
 getTeamLogo(teamName: string): string {
   return this.teamLogos[teamName] || 'https://via.placeholder.com/50';
 }
-
+pointsTable = [
+  { team: 'IDream Tiruppur Tamizhans', played: 5, won: 4, lost: 1, points: 8, netrr: '+0.85' },
+  { team: 'Lyca Kovai Kings', played: 5, won: 4, lost: 1, points: 8, netrr: '+0.76' },
+  { team: 'Chepauk Super Gillies', played: 5, won: 3, lost: 2, points: 6, netrr: '+0.52' },
+  { team: 'Dindigul Dragons', played: 4, won: 2, lost: 2, points: 4, netrr: '+0.31' },
+  { team: 'SKM Salem Spartans', played: 4, won: 2, lost: 2, points: 4, netrr: '-0.21' },
+  { team: 'Trichy Grand Cholas', played: 4, won: 1, lost: 3, points: 2, netrr: '-0.47' },
+  { team: 'Siechem Madurai Panthers', played: 4, won: 1, lost: 3, points: 2, netrr: '-0.66' },
+  { team: 'Nellai Royal Kings', played: 4, won: 1, lost: 3, points: 2, netrr: '-0.92' }
+];
   fixtures = [
     {
       date: '06 JUN 2025',
@@ -189,6 +218,16 @@ getTeamLogo(teamName: string): string {
     }
   ];
 
+  getPointsTable(): Observable<any> {
+    const now = Date.now();
+    if (!this.cachedResponse$ || now - this.lastFetchTime > this.cacheTime) {
+      this.lastFetchTime = now;
+      this.cachedResponse$ = this.http.get(this.pointsapiUrl, { headers: this.headers }).pipe(
+        shareReplay(1)
+      );
+    }
+    return this.cachedResponse$;
+  }
   public getLatestMatches(): Observable<any[]> {
     return this.http.get<any>(this.apiUrl, { headers: this.headers }).pipe(
       map((response) => {

@@ -21,6 +21,8 @@
   padding: 0;
   z-index: 9999;
   background-color: #081a2d;
+  padding-left: 1.5rem;
+  justify-content: space-between !important;
 }
 
 /* Social Bar Styling */
@@ -32,6 +34,13 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.social-bar :hover {
+  color: rgb(255, 0, 191);
+  text-align: center;
   z-index: 1000;
   transition: top 0.3s;
 }
@@ -78,7 +87,7 @@
 }
 
 .navbar-nav .nav-item:hover {
-    color: #FFD700 !important; /* Golden hover effect */
+    color: #e61d25 !important; /* Golden hover effect */
 }
 
 .navbar-collapse {
@@ -93,8 +102,11 @@
 @media (max-width: 992px) {
     .navbar {
         flex-wrap: wrap;
+        padding-left:0px !important;
     }
-
+    .justify-content-between {
+      justify-content: start !important;
+    }
     .navbar-toggler {
         display: block;
     }
@@ -103,10 +115,8 @@
         display: none; /* Hide collapse by default */
     }
 
-    .navbar-collapse.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    .hidden-mob {
+        display: none;
     }
 
     .navbar-nav {
@@ -199,8 +209,11 @@
   font-weight: 700;
 }
 
-.body {
-  font-family: 'Raleway', sans-serif;
+.body-title {
+  font-family: "Montserrat", sans-serif !important;
+  color:#ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .navbar-brand h1 {
@@ -238,8 +251,9 @@
 /* Background Styles */
 .bg-dark {
   --bs-bg-opacity: 1;
-  background: #002CB0;
-  background: radial-gradient(circle, rgba(0, 44, 176, 1) 37%, rgba(126, 22, 149, 1) 67%, rgba(255, 0, 121, 1) 93%);
+  background: #081a2d!important;
+  /* background: #002CB0;
+  background: radial-gradient(circle, rgba(0, 44, 176, 1) 37%, rgba(126, 22, 149, 1) 67%, rgba(255, 0, 121, 1) 93%); */
 }
 
 /* Player Slider */
@@ -249,7 +263,7 @@
   height: 90vh;
   overflow: hidden;
   background: linear-gradient(to right, #1a0033, #300060);
-  background-image: url('../../img/IDTTplayerslider2.jpg');
+  background-image: url('../../img/playerslider2otrophy.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -589,6 +603,7 @@
 /* General text */
 body {
   font-family: 'Raleway', sans-serif;
+  background-color: #010c18;
 }
 
 /* Other global styles, e.g. buttons, inputs, etc. */
@@ -684,4 +699,105 @@ body {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.video-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .video-thumbnail {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      pointer-events: none;
+    }
+  }
+
+  .card-body {
+    padding: 20px;
+
+    .card-title {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .btn-watch {
+      margin-top: 10px;
+      background-color: #e60084;
+      border: none;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #5100e6;
+      }
+    }
+  }
+}
+
+.baby-pink-border {
+  width: 100%;
+  height: 4px; /* You can adjust the thickness */
+  background-color: #ffc0cb; /* Baby pink */
+   /* Spacing above and below */
+  margin: 20px 0;
+  border-radius: 2px; /* Slight rounding */
+  box-shadow: 0 0 8px rgba(255, 192, 203, 0.6);
+
+}
+
+
+.text-center.rounded.p-4 {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.text-center.rounded.p-4 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.white-bg {
+  background-color: white;
+  padding: 1rem; /* Add some padding if needed */
+  border-radius: 8px; /* Slight rounding, adjust as needed */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
 }
