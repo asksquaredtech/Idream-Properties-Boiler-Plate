@@ -134,7 +134,7 @@ export class IdreamcricketComponent extends AppComponent {
       runs: 350,
       imageUrl: '../../img/IDTT Webp/Mohan Prasath.webp'
     },
-    
+
     {
       name: 'MATHIVANAN',
       surname: '',
@@ -208,5 +208,84 @@ export class IdreamcricketComponent extends AppComponent {
   get currentPlayer() {
     return this.players[this.currentIndex];
   }
-  
+  override ngAfterViewInit(): void {
+    const preloader = document.getElementById('preloader');
+    const trophyScreen = document.getElementById('trophy-screen');
+    const mainContent = document.getElementById('main-content');
+    const backgroundMusic = new Audio('../../img/Audio/idttaudio.mp3');
+    const warning = document.getElementById('audio-warning');
+    const enableSound = document.getElementById('enable-sound');
+    const cancel = document.getElementById('Cancel');
+
+    backgroundMusic.loop = false;
+
+    // ✅ Check all elements first
+    if (preloader && trophyScreen && mainContent && warning && enableSound && cancel) {
+      // Show the sound enable prompt
+      warning.style.display = 'flex';
+
+      cancel.addEventListener('click', () => {
+        warning.style.display = 'none';
+        mainContent.style.display = 'block';
+      });
+
+      enableSound.addEventListener('click', () => {
+        warning.style.display = 'none';
+
+        backgroundMusic.play().then(() => {
+          // 🎵 Audio played successfully — continue with preloader
+          preloader.style.alignItems = 'fit-content';
+          preloader.style.justifyContent = 'fit-content';
+          preloader.style.display = 'flex';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+
+            // Show trophy screen
+            trophyScreen.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+              trophyScreen.style.opacity = '1';
+              trophyScreen.style.transition = 'opacity 1s ease';
+              requestAnimationFrame(() => {
+                trophyScreen.style.opacity = '0';
+              });
+
+              setTimeout(() => {
+                trophyScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                document.body.style.overflow = 'auto';
+              }, 1500); // fade out
+            }, 4500);
+          }, 10500); // preloader duration
+        }).catch(err => {
+          console.warn('Autoplay failed:', err);
+          // 🎧 If user clicks but still denied, show main content directly
+          warning.style.display = 'none';
+          showMainContentImmediately();
+        });
+      });
+
+      // 🚫 If user never interacts after 8 seconds, show main page directly
+      setTimeout(() => {
+        if (warning.style.display === 'flex') {
+          warning.style.display = 'none';
+          showMainContentImmediately();
+        }
+      }, 8000); // Adjust as needed
+    } else {
+      // Fallback: load main page anyway
+      showMainContentImmediately();
+    }
+
+    // 👇 Helper fallback function
+    function showMainContentImmediately() {
+      if (preloader) preloader.style.display = 'none';
+      if (trophyScreen) trophyScreen.style.display = 'none';
+      if (mainContent) {
+        mainContent.style.display = 'block';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  }
 }

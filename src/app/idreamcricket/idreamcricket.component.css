@@ -801,3 +801,103 @@ body {
   border-radius: 8px; /* Slight rounding, adjust as needed */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
 }
+
+  .hero-banner {
+    background-image: url('../../img/champs2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh; /* 60% of viewport height */
+  }
+
+  @media (max-width: 768px) {
+    .hero-banner {
+      height: 40vh; /* Smaller height for mobile */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero-banner {
+      height: 80vh; /* Taller for large screens */
+    }
+  }
+
+  #preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    @media (min-width: 250px) and (max-width: 600px) {
+      #preloader {
+      justify-content: fit-content;
+      align-items: fit-content; /* Smaller height for mobile */
+      }
+    }
+    #preloader img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    #main-content {
+      display: none;
+    }
+
+    #trophy-screen {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      color: #fff;
+      z-index: 9998;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Rajdhani', sans-serif;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+  
+    #trophy-screen img {
+      max-width: 400px;
+      width: 80%;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+      animation: floatTrophy 3s ease-in-out infinite;
+    }
+  
+    #trophy-screen h1 {
+      font-size: 2.5rem;
+      color: #ffd700;
+      text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.3);
+      animation: fadeInUp 2s ease-in-out;
+    }
+  
+    @keyframes floatTrophy {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
